@@ -12,10 +12,20 @@ class PlantTableViewCell: UITableViewCell {
     @IBOutlet weak var plantCellImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    static let cellHeight: CGFloat = 136.0
+    
     var viewModel: PlantTableViewCellViewModelFromPlant! {
         didSet {
             fillUI()
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        plantCellImageView.layer.cornerRadius = 20
+        NSLayoutConstraint.activate([
+            contentView.heightAnchor.constraint(equalToConstant: PlantTableViewCell.cellHeight)
+        ])
     }
 
     override func awakeFromNib() {

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
+    var parentCoordinator: Coordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
   
@@ -28,6 +29,13 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         plantProfileCoordinator.parentCoordinator = self
         childCoordinators.append(plantProfileCoordinator)
         plantProfileCoordinator.start()
+    }
+    
+    func addNewPlant() {
+        let addNewPlantCoordinator = AddNewPlantCoordinator(navigationController: navigationController)
+        addNewPlantCoordinator.parentCoordinator = self
+        childCoordinators.append(addNewPlantCoordinator)
+        addNewPlantCoordinator.start()
     }
     
     func childDidFinish(_ child: Coordinator?) {

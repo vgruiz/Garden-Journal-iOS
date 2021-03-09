@@ -18,6 +18,7 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         self.delegate = self
         self.dataSource = self
         self.register(UINib(nibName: "PlantTableViewCell", bundle: nil), forCellReuseIdentifier: "PlantTableViewCell")
+        separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,17 +37,12 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print( viewModel.plantList?[indexPath.row].value.name ?? "no name I guess" )
-
         coordinator?.goToPlantProfile(forPlantIndexPath: indexPath)
-        
-//        if let plant = viewModel.plantList?[indexPath.row] {
-//            coordinator?.goToPlantProfile( for: plant )
-//        }
-//        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return PlantTableViewCell.cellHeight
     }
 
 }

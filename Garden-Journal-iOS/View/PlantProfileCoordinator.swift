@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class PlantProfileCoordinator: Coordinator {
-    weak var parentCoordinator: MainCoordinator?
+    var parentCoordinator: Coordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     var plantIndexPath: IndexPath

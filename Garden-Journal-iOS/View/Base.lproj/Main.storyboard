@@ -51,6 +51,55 @@
             </objects>
             <point key="canvasLocation" x="763.768115942029" y="116.51785714285714"/>
         </scene>
+        <!--Add New Plant View Controller-->
+        <scene sceneID="eO0-e1-Lvk">
+            <objects>
+                <viewController storyboardIdentifier="AddNewPlantViewController" id="quP-de-KOc" customClass="AddNewPlantViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a7u-u1-SGF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QTM-5d-U4T" customClass="NewPlantFormTableView" customModule="Garden_Journal_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="429" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="302" id="eMg-SS-4hL" customClass="NewPlantInputTableViewCell" customModule="Garden_Journal_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="429" height="302"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eMg-SS-4hL" id="vWU-68-jOn">
+                                            <rect key="frame" x="0.0" y="0.0" width="429" height="302"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-th-Ihj">
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mAq-U9-McY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mwK-az-QaJ"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="QTM-5d-U4T" firstAttribute="leading" secondItem="a7u-u1-SGF" secondAttribute="leading" id="C0l-O5-6Xb"/>
+                            <constraint firstItem="Afg-th-Ihj" firstAttribute="leading" secondItem="a7u-u1-SGF" secondAttribute="leading" constant="20" symbolic="YES" id="MPf-GX-hXO"/>
+                            <constraint firstAttribute="trailing" secondItem="Afg-th-Ihj" secondAttribute="trailing" constant="20" symbolic="YES" id="PDX-HZ-Lah"/>
+                            <constraint firstAttribute="trailing" secondItem="QTM-5d-U4T" secondAttribute="trailing" constant="-15" id="U6v-Vm-1eO"/>
+                            <constraint firstItem="QTM-5d-U4T" firstAttribute="top" secondItem="Afg-th-Ihj" secondAttribute="bottom" id="VsI-2I-aXI"/>
+                            <constraint firstItem="Afg-th-Ihj" firstAttribute="top" secondItem="mwK-az-QaJ" secondAttribute="top" id="hP7-Ww-5fY"/>
+                            <constraint firstItem="mwK-az-QaJ" firstAttribute="bottom" secondItem="QTM-5d-U4T" secondAttribute="bottom" id="w3T-9e-yoY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ekh-KE-6rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.768115942029" y="843.75"/>
+        </scene>
         <!--Plant Profile View Controller-->
         <scene sceneID="Wfd-ba-GSV">
             <objects>
@@ -68,7 +117,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aK4-ei-mDT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <connections>
                         <outlet property="tmpLabel" destination="mr3-PA-KcW" id="kFH-a6-Hp6"/>
@@ -76,12 +125,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecS-yp-TAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534.7826086956522" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1514" y="117"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
