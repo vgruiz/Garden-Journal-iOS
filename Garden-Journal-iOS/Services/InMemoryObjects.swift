@@ -24,13 +24,13 @@ class InMemoryObjects {
         
         coreDataManager.savePlant(name: "Planteen",
                                   adoptionDate: Date(),
-                                  location: "Bedroom",
+                                  location: "Backyard",
                                   imageData: UIImage(named: "bonsai1")?.jpegData(compressionQuality: 1.0),
                                   pinnedNotes: nil)
         
         coreDataManager.savePlant(name: "Plantoo",
                                   adoptionDate: Date(),
-                                  location: "Bedroom",
+                                  location: "Office",
                                   imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
                                   pinnedNotes: nil)
     }

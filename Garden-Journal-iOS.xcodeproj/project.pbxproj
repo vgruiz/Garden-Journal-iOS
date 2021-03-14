@@ -11,6 +11,7 @@
 		292DE40B25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE40A25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift */; };
 		292DE40E25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE40D25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift */; };
 		292DE41125F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41025F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift */; };
+		292DE41525F9D3900070A777 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41425F9D3900070A777 /* UITextField+Ext.swift */; };
 		2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9925EB48230016F841 /* MainCoordinator.swift */; };
 		2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9D25EB48300016F841 /* Coordinator.swift */; };
 		2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BAA025EB48710016F841 /* Storyboarded.swift */; };
@@ -45,6 +46,7 @@
 		292DE40A25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantFormTableViewViewModel.swift; sourceTree = "<group>"; };
 		292DE40D25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		292DE41025F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputTableViewCellViewModelForInput.swift; sourceTree = "<group>"; };
+		292DE41425F9D3900070A777 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		2931BA9925EB48230016F841 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9D25EB48300016F841 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2931BAA025EB48710016F841 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 				292A736F25E60CCD009268B8 /* InMemoryObjects.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		292DE41325F9D3760070A777 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				292DE41425F9D3900070A777 /* UITextField+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2931BA9825EB47FD0016F841 /* Coordinators */ = {
@@ -173,6 +183,7 @@
 			children = (
 				2946C16A25E329C100268123 /* Main.storyboard */,
 				2946C17225E329C300268123 /* LaunchScreen.storyboard */,
+				292DE41325F9D3760070A777 /* Extensions */,
 				2931BAC025EF4B370016F841 /* Home */,
 				2931BAC125EF4B5D0016F841 /* Plant Profile */,
 				2931BAC225EF4B740016F841 /* Add New Plant */,
@@ -296,6 +307,7 @@
 				2931BABD25EF46310016F841 /* NewPlantInputTableViewCell.swift in Sources */,
 				2946C16F25E329C100268123 /* Garden_Journal_iOS.xcdatamodeld in Sources */,
 				2946C16925E329C100268123 /* HomeViewController.swift in Sources */,
+				292DE41525F9D3900070A777 /* UITextField+Ext.swift in Sources */,
 				2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */,
 				2946C16525E329C100268123 /* AppDelegate.swift in Sources */,
 				2931BAA825EB50C60016F841 /* PlantProfileCoordinator.swift in Sources */,

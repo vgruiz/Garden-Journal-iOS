@@ -24,8 +24,6 @@ class NewPlantFormTableView: UITableView, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dequeueReusableCell(withIdentifier: "NewPlantInputTableViewCell") as! NewPlantInputTableViewCell
         
-//        cell.inputDefinition = viewModel.inputList[indexPath.row]
-        
         cell.viewModel = NewPlantInputTableViewCellViewModelForInput(viewModel.inputList[indexPath.row])
 
         return cell

@@ -8,8 +8,8 @@
 import Foundation
 
 protocol NewPlantInputTableViewCellViewModel {
-    var newPlantInput: NewPlantInput { get }
+    var type: InputType { get }
     var placeholderText: String? { get }
     var instructionText: String { get }
-    var locationsList: Observable<[String]>?
+    var locationsList: Observable<[String]>? { get set }
 }
