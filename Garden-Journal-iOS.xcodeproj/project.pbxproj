@@ -12,6 +12,10 @@
 		292DE40E25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE40D25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift */; };
 		292DE41125F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41025F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift */; };
 		292DE41525F9D3900070A777 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41425F9D3900070A777 /* UITextField+Ext.swift */; };
+		292DE41925FEDEE50070A777 /* NewPlantInputTableViewCellCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41825FEDEE40070A777 /* NewPlantInputTableViewCellCoordinator.swift */; };
+		292DE41C25FEDFF40070A777 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41B25FEDFF40070A777 /* ImagePickerCoordinator.swift */; };
+		292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41E25FEE12C0070A777 /* ImagePicker.swift */; };
+		292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */; };
 		2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9925EB48230016F841 /* MainCoordinator.swift */; };
 		2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9D25EB48300016F841 /* Coordinator.swift */; };
 		2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BAA025EB48710016F841 /* Storyboarded.swift */; };
@@ -47,6 +51,10 @@
 		292DE40D25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		292DE41025F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputTableViewCellViewModelForInput.swift; sourceTree = "<group>"; };
 		292DE41425F9D3900070A777 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		292DE41825FEDEE40070A777 /* NewPlantInputTableViewCellCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputTableViewCellCoordinator.swift; sourceTree = "<group>"; };
+		292DE41B25FEDFF40070A777 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		292DE41E25FEE12C0070A777 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Ext.swift"; sourceTree = "<group>"; };
 		2931BA9925EB48230016F841 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9D25EB48300016F841 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2931BAA025EB48710016F841 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				292DE41425F9D3900070A777 /* UITextField+Ext.swift */,
+				292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +121,8 @@
 				2931BA9D25EB48300016F841 /* Coordinator.swift */,
 				2931BAA725EB50C60016F841 /* PlantProfileCoordinator.swift */,
 				2931BAB525EE045A0016F841 /* AddNewPlantCoordinator.swift */,
+				292DE41825FEDEE40070A777 /* NewPlantInputTableViewCellCoordinator.swift */,
+				292DE41B25FEDFF40070A777 /* ImagePickerCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -142,6 +153,7 @@
 				2931BAC325EF4BD80016F841 /* NewPlantFormTableView.swift */,
 				2931BABB25EF46310016F841 /* NewPlantInputTableViewCell.swift */,
 				2931BABC25EF46310016F841 /* NewPlantInputTableViewCell.xib */,
+				292DE41E25FEE12C0070A777 /* ImagePicker.swift */,
 			);
 			path = "Add New Plant";
 			sourceTree = "<group>";
@@ -288,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */,
 				2931BAB225EC717D0016F841 /* PlantProfileViewModelForPlant.swift in Sources */,
 				292DE40B25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift in Sources */,
 				2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */,
@@ -297,8 +310,10 @@
 				292DE41125F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift in Sources */,
 				2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */,
 				2946C19225E33A6D00268123 /* PlantTableViewCellViewModelFromPlant.swift in Sources */,
+				292DE41925FEDEE50070A777 /* NewPlantInputTableViewCellCoordinator.swift in Sources */,
 				2931BAAC25EB512A0016F841 /* PlantProfileViewController.swift in Sources */,
 				2946C18325E32ACF00268123 /* Observable.swift in Sources */,
+				292DE41C25FEDFF40070A777 /* ImagePickerCoordinator.swift in Sources */,
 				2946C19A25E345B600268123 /* HomeTableView.swift in Sources */,
 				2946C18E25E3376900268123 /* PlantTableViewCell.swift in Sources */,
 				2946C19625E33B8600268123 /* PlantTableViewCellViewModel.swift in Sources */,
@@ -313,6 +328,7 @@
 				2931BAA825EB50C60016F841 /* PlantProfileCoordinator.swift in Sources */,
 				2931BAAF25EC6AB00016F841 /* PlantProfileViewModel.swift in Sources */,
 				292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */,
+				292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */,
 				2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

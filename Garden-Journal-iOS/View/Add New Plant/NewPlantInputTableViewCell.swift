@@ -9,6 +9,14 @@ import UIKit
 
 class NewPlantInputTableViewCell: UITableViewCell {
     
+    var imagePicker: ImagePicker?
+    weak var coordinator: NewPlantInputTableViewCellCoordinator?
+    var viewModel: NewPlantInputTableViewCellViewModel! {
+        didSet {
+            fillUI()
+        }
+    }
+    
     //TODO: Set the cells height to be basically as large as the phone is
     // Then set the spacing so that the rest of the cell's elements appear
     // in their proper locations with the keyboard considered.
@@ -39,11 +47,6 @@ class NewPlantInputTableViewCell: UITableViewCell {
         return accessoryView
     }()
     
-    var viewModel: NewPlantInputTableViewCellViewModel! {
-        didSet {
-            fillUI()
-        }
-    }
     
     @IBOutlet var inputTextField: UITextField!
     @IBOutlet var informationLabel: UILabel!
@@ -52,6 +55,9 @@ class NewPlantInputTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         screenWidth = UIScreen.main.bounds.width
+        if let parent = parentViewController {
+            imagePicker = ImagePicker(presentationController: parent, delegate: self)
+        }
 //        locationsPickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 216))
     }
 
@@ -71,6 +77,26 @@ class NewPlantInputTableViewCell: UITableViewCell {
     
     @IBAction func addImageButtonPressed(_ sender: Any) {
         print("Add image button pressed.")
+//        let imageOptionController = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+//        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+//            self.coordinator?.addNewPhoto(from: .Camera)
+//        }
+//        let photoAlbumAction = UIAlertAction(title: "Photos Album", style: .default) { (action) in
+//            self.coordinator?.addNewPhoto(from: .Album)
+//        }
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//        imageOptionController.addAction(cameraAction)
+//        imageOptionController.addAction(photoAlbumAction)
+//        imageOptionController.addAction(cancelAction)
+//
+//        parentViewController?.present(imageOptionController, animated: true, completion: nil)
+        guard let parent = parentViewController else {
+            return
+        }
+//        let imagePicker = ImagePicker(presentationController: parent, delegate: self)
+        imagePicker?.present(from: parent.view)
+        
     }
     
     private func fillUI() {
@@ -154,7 +180,16 @@ extension NewPlantInputTableViewCell : UIPickerViewDelegate, UIPickerViewDataSou
     }
 }
 
-// MARK: Modified Keyboard Input
-extension NewPlantInputTableViewCell {
-    
+extension NewPlantInputTableViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if viewModel.type == .Name {
+//            coordinator.goToAdoptionDateCell()
+        }
+    }
+}
+
+extension NewPlantInputTableViewCell: ImagePickerDelegate {
+    func didSelect(image: UIImage?) {
+        print("got an image")
+    }
 }

@@ -95,10 +95,13 @@
                             <constraint firstItem="mwK-az-QaJ" firstAttribute="bottom" secondItem="QTM-5d-U4T" secondAttribute="bottom" id="w3T-9e-yoY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newPlantFormTableView" destination="QTM-5d-U4T" id="Gsm-nY-vkB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekh-KE-6rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763.768115942029" y="843.75"/>
+            <point key="canvasLocation" x="764" y="834"/>
         </scene>
         <!--Plant Profile View Controller-->
         <scene sceneID="Wfd-ba-GSV">

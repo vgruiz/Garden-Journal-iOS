@@ -9,7 +9,8 @@ import UIKit
 
 class NewPlantFormTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
 
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: Coordinator?
+    var cellCoordinators = [NewPlantInputTableViewCellCoordinator]()
     var viewModel = NewPlantFormTableViewViewModel()
     //register new cell and get them to appear
  
@@ -25,7 +26,8 @@ class NewPlantFormTableView: UITableView, UITableViewDelegate, UITableViewDataSo
         let cell = dequeueReusableCell(withIdentifier: "NewPlantInputTableViewCell") as! NewPlantInputTableViewCell
         
         cell.viewModel = NewPlantInputTableViewCellViewModelForInput(viewModel.inputList[indexPath.row])
-
+        cell.coordinator = cellCoordinators[indexPath.row]
+        
         return cell
     }
     

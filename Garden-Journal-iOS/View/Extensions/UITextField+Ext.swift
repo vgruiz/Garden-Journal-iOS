@@ -14,7 +14,10 @@ extension UITextField {
         self.resignFirstResponder()
         self.inputView = nil
         self.inputAccessoryView = nil
-        self.inputView = pickerView ?? nil
+        if let pickerView = pickerView {
+            pickerView.selectRow(0, inComponent: 0, animated: false)
+            self.inputView = pickerView
+        }
         self.inputAccessoryView = accessory
         self.becomeFirstResponder()
     }
