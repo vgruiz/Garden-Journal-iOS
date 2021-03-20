@@ -32,11 +32,16 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
     
     func addNewPlant() {
-        let addNewPlantCoordinator = AddNewPlantCoordinator(navigationController: navigationController)
-        addNewPlantCoordinator.parentCoordinator = self
-        childCoordinators.append(addNewPlantCoordinator)
-        addNewPlantCoordinator.start()
+//        let addNewPlantCoordinator = AddNewPlantCoordinator(navigationController: navigationController)
+//        addNewPlantCoordinator.parentCoordinator = self
+//        childCoordinators.append(addNewPlantCoordinator)
+//        addNewPlantCoordinator.start()
+        let newPlantInputCoordinator = NewPlantInputCoordinator(navigationController: navigationController)
+        newPlantInputCoordinator.parentCoordinator = self
+        childCoordinators.append(newPlantInputCoordinator)
+        newPlantInputCoordinator.start()
     }
+    
     
     func childDidFinish(_ child: Coordinator?) {
         for (index, coordinator) in childCoordinators.enumerated() {

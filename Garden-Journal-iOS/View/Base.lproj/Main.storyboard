@@ -101,7 +101,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekh-KE-6rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="834"/>
+            <point key="canvasLocation" x="-45" y="836"/>
+        </scene>
+        <!--New Plant Input Page View Controller-->
+        <scene sceneID="xch-w9-dSg">
+            <objects>
+                <pageViewController storyboardIdentifier="NewPlantInputPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="LSn-iH-bXG" customClass="NewPlantInputPageViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OtW-JH-sNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="826"/>
         </scene>
         <!--Plant Profile View Controller-->
         <scene sceneID="Wfd-ba-GSV">

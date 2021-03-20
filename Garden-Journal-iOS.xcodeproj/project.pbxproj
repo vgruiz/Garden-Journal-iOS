@@ -16,6 +16,10 @@
 		292DE41C25FEDFF40070A777 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41B25FEDFF40070A777 /* ImagePickerCoordinator.swift */; };
 		292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41E25FEE12C0070A777 /* ImagePicker.swift */; };
 		292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */; };
+		292DE44C260305FB0070A777 /* NewPlantInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE44A260305FB0070A777 /* NewPlantInputViewController.swift */; };
+		292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292DE44B260305FB0070A777 /* NewPlantInputViewController.xib */; };
+		292DE450260308540070A777 /* NewPlantInputPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE44F260308540070A777 /* NewPlantInputPageViewController.swift */; };
+		292DE45326030D3F0070A777 /* NewPlantInputCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE45226030D3F0070A777 /* NewPlantInputCoordinator.swift */; };
 		2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9925EB48230016F841 /* MainCoordinator.swift */; };
 		2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9D25EB48300016F841 /* Coordinator.swift */; };
 		2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BAA025EB48710016F841 /* Storyboarded.swift */; };
@@ -55,6 +59,10 @@
 		292DE41B25FEDFF40070A777 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
 		292DE41E25FEE12C0070A777 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Ext.swift"; sourceTree = "<group>"; };
+		292DE44A260305FB0070A777 /* NewPlantInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputViewController.swift; sourceTree = "<group>"; };
+		292DE44B260305FB0070A777 /* NewPlantInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPlantInputViewController.xib; sourceTree = "<group>"; };
+		292DE44F260308540070A777 /* NewPlantInputPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputPageViewController.swift; sourceTree = "<group>"; };
+		292DE45226030D3F0070A777 /* NewPlantInputCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9925EB48230016F841 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9D25EB48300016F841 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2931BAA025EB48710016F841 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 				2931BAB525EE045A0016F841 /* AddNewPlantCoordinator.swift */,
 				292DE41825FEDEE40070A777 /* NewPlantInputTableViewCellCoordinator.swift */,
 				292DE41B25FEDFF40070A777 /* ImagePickerCoordinator.swift */,
+				292DE45226030D3F0070A777 /* NewPlantInputCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -154,6 +163,9 @@
 				2931BABB25EF46310016F841 /* NewPlantInputTableViewCell.swift */,
 				2931BABC25EF46310016F841 /* NewPlantInputTableViewCell.xib */,
 				292DE41E25FEE12C0070A777 /* ImagePicker.swift */,
+				292DE44A260305FB0070A777 /* NewPlantInputViewController.swift */,
+				292DE44B260305FB0070A777 /* NewPlantInputViewController.xib */,
+				292DE44F260308540070A777 /* NewPlantInputPageViewController.swift */,
 			);
 			path = "Add New Plant";
 			sourceTree = "<group>";
@@ -289,6 +301,7 @@
 				2931BABE25EF46310016F841 /* NewPlantInputTableViewCell.xib in Resources */,
 				2946C18F25E3376900268123 /* PlantTableViewCell.xib in Resources */,
 				2946C17125E329C300268123 /* Assets.xcassets in Resources */,
+				292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */,
 				2946C16C25E329C100268123 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +334,9 @@
 				2931BAC425EF4BD80016F841 /* NewPlantFormTableView.swift in Sources */,
 				2931BABD25EF46310016F841 /* NewPlantInputTableViewCell.swift in Sources */,
 				2946C16F25E329C100268123 /* Garden_Journal_iOS.xcdatamodeld in Sources */,
+				292DE450260308540070A777 /* NewPlantInputPageViewController.swift in Sources */,
 				2946C16925E329C100268123 /* HomeViewController.swift in Sources */,
+				292DE44C260305FB0070A777 /* NewPlantInputViewController.swift in Sources */,
 				292DE41525F9D3900070A777 /* UITextField+Ext.swift in Sources */,
 				2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */,
 				2946C16525E329C100268123 /* AppDelegate.swift in Sources */,
@@ -329,6 +344,7 @@
 				2931BAAF25EC6AB00016F841 /* PlantProfileViewModel.swift in Sources */,
 				292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */,
 				292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */,
+				292DE45326030D3F0070A777 /* NewPlantInputCoordinator.swift in Sources */,
 				2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

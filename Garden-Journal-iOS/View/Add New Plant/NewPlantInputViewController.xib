@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewPlantInputViewController" customModule="Garden_Journal_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="addImageButton" destination="HNg-du-CKA" id="zve-q1-Nda"/>
+                <outlet property="inputTextField" destination="wRr-AQ-eTB" id="ah1-ih-JGy"/>
+                <outlet property="instructionLabel" destination="EqO-lI-oFy" id="ro6-lh-upd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqO-lI-oFy" userLabel="Instruction Label">
+                    <rect key="frame" x="19" y="435.5" width="375" height="76.5"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-du-CKA" userLabel="Add Image Button">
+                    <rect key="frame" x="0.0" y="212.5" width="414" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="sIb-No-NAc"/>
+                    </constraints>
+                    <state key="normal" image="camera"/>
+                    <connections>
+                        <action selector="addPhotoButtonPressed:" destination="-1" eventType="touchUpInside" id="BnL-77-g3L"/>
+                    </connections>
+                </button>
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name your plant" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRr-AQ-eTB" userLabel="Input Text Field">
+                    <rect key="frame" x="0.0" y="212" width="414" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="L9u-Qk-P8b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EqO-lI-oFy" secondAttribute="trailing" constant="20" id="Lbd-LP-WBm"/>
+                <constraint firstItem="EqO-lI-oFy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="Q9B-wN-qdN"/>
+                <constraint firstItem="HNg-du-CKA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uu7-af-ct3"/>
+                <constraint firstItem="EqO-lI-oFy" firstAttribute="top" secondItem="HNg-du-CKA" secondAttribute="bottom" constant="148" id="Uwe-5R-jyd"/>
+                <constraint firstItem="wRr-AQ-eTB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VkN-Lg-HRb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EqO-lI-oFy" secondAttribute="bottom" constant="350" id="bGJ-Zi-kXI"/>
+                <constraint firstAttribute="trailing" secondItem="HNg-du-CKA" secondAttribute="trailing" id="cOv-HJ-93z"/>
+                <constraint firstItem="EqO-lI-oFy" firstAttribute="top" secondItem="wRr-AQ-eTB" secondAttribute="bottom" constant="148.5" id="iNk-7p-bbJ"/>
+                <constraint firstAttribute="trailing" secondItem="wRr-AQ-eTB" secondAttribute="trailing" id="ieC-jT-ILe"/>
+            </constraints>
+            <point key="canvasLocation" x="44.927536231884062" y="131.91964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
