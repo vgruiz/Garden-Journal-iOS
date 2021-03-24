@@ -19,7 +19,7 @@
 		292DE44C260305FB0070A777 /* NewPlantInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE44A260305FB0070A777 /* NewPlantInputViewController.swift */; };
 		292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292DE44B260305FB0070A777 /* NewPlantInputViewController.xib */; };
 		292DE450260308540070A777 /* NewPlantInputPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE44F260308540070A777 /* NewPlantInputPageViewController.swift */; };
-		292DE45326030D3F0070A777 /* NewPlantInputCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE45226030D3F0070A777 /* NewPlantInputCoordinator.swift */; };
+		292DE45326030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */; };
 		2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9925EB48230016F841 /* MainCoordinator.swift */; };
 		2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9D25EB48300016F841 /* Coordinator.swift */; };
 		2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BAA025EB48710016F841 /* Storyboarded.swift */; };
@@ -46,6 +46,7 @@
 		2946C19A25E345B600268123 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19925E345B600268123 /* HomeTableView.swift */; };
 		2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */; };
 		2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19F25E3672200268123 /* CoreDataManager.swift */; };
+		29489D7326080089003BB098 /* NewPlantInputCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29489D7226080089003BB098 /* NewPlantInputCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +63,7 @@
 		292DE44A260305FB0070A777 /* NewPlantInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputViewController.swift; sourceTree = "<group>"; };
 		292DE44B260305FB0070A777 /* NewPlantInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPlantInputViewController.xib; sourceTree = "<group>"; };
 		292DE44F260308540070A777 /* NewPlantInputPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputPageViewController.swift; sourceTree = "<group>"; };
-		292DE45226030D3F0070A777 /* NewPlantInputCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputCoordinator.swift; sourceTree = "<group>"; };
+		292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputPageViewCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9925EB48230016F841 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9D25EB48300016F841 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2931BAA025EB48710016F841 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		2946C19925E345B600268123 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewViewModel.swift; sourceTree = "<group>"; };
 		2946C19F25E3672200268123 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		29489D7226080089003BB098 /* NewPlantInputCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,8 @@
 				2931BAB525EE045A0016F841 /* AddNewPlantCoordinator.swift */,
 				292DE41825FEDEE40070A777 /* NewPlantInputTableViewCellCoordinator.swift */,
 				292DE41B25FEDFF40070A777 /* ImagePickerCoordinator.swift */,
-				292DE45226030D3F0070A777 /* NewPlantInputCoordinator.swift */,
+				292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */,
+				29489D7226080089003BB098 /* NewPlantInputCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				292DE41C25FEDFF40070A777 /* ImagePickerCoordinator.swift in Sources */,
 				2946C19A25E345B600268123 /* HomeTableView.swift in Sources */,
 				2946C18E25E3376900268123 /* PlantTableViewCell.swift in Sources */,
+				29489D7326080089003BB098 /* NewPlantInputCoordinator.swift in Sources */,
 				2946C19625E33B8600268123 /* PlantTableViewCellViewModel.swift in Sources */,
 				2931BAB625EE045A0016F841 /* AddNewPlantCoordinator.swift in Sources */,
 				2931BAC425EF4BD80016F841 /* NewPlantFormTableView.swift in Sources */,
@@ -344,7 +348,7 @@
 				2931BAAF25EC6AB00016F841 /* PlantProfileViewModel.swift in Sources */,
 				292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */,
 				292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */,
-				292DE45326030D3F0070A777 /* NewPlantInputCoordinator.swift in Sources */,
+				292DE45326030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift in Sources */,
 				2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

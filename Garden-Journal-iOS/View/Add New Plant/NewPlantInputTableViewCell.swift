@@ -58,7 +58,6 @@ class NewPlantInputTableViewCell: UITableViewCell {
         if let parent = parentViewController {
             imagePicker = ImagePicker(presentationController: parent, delegate: self)
         }
-//        locationsPickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 216))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
