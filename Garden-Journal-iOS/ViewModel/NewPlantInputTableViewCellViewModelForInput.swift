@@ -9,16 +9,12 @@ import Foundation
 
 class NewPlantInputTableViewCellViewModelForInput : NewPlantInputTableViewCellViewModel {
 
-//    let coreDataManager = CoreDataManager()
-
-//    var newPlantInput: NewPlantInput
     var type: InputType
     var placeholderText: String?
     var instructionText: String
     var locationsList: Observable<[String]>?
     
     init(_ newInput: NewPlantInput) {
-//        self.newPlantInput = newInput
         self.type = newInput.inputType
         self.placeholderText = newInput.placeholderText
         self.instructionText = newInput.instructionText

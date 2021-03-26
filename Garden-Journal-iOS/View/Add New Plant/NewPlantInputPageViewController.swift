@@ -10,15 +10,11 @@ import UIKit
 class NewPlantInputPageViewController: UIPageViewController, UIPageViewControllerDelegate, Storyboarded {
     
     var coordinator: NewPlantInputPageViewCoordinator?
-    
-//    private(set) lazy var orderedInputViewControllers: [UIViewController] = {
-//        return [self.makeNewPlantInputViewController(type: .Name, placeholderText: "placeholder 1", instructionText: "instruction 1"),
-//                self.makeNewPlantInputViewController(type: .Location, placeholderText: "placeholder 2", instructionText: "instruction 2"),
-//                self.makeNewPlantInputViewController(type: .DatePicker, placeholderText: "placeholder 3", instructionText: "instruction 3"),
-//                self.makeNewPlantInputViewController(type: .Image, placeholderText: "placeholder 4", instructionText: "instruction 4")]
-//    }()
-    
-    
+    var viewModel: NewPlantFormTableViewViewModel? {
+        didSet {
+            fillUI()
+        }
+    }
     private(set) var orderedInputViewControllers: [NewPlantInputViewController]?
     
     override class func awakeFromNib() {
@@ -36,28 +32,15 @@ class NewPlantInputPageViewController: UIPageViewController, UIPageViewControlle
     
     public func setPages(_ pages: [NewPlantInputViewController]) {
         orderedInputViewControllers = pages
+        
     }
     
-    private func makeNewPlantInputViewController(type: InputType, placeholderText: String = "", instructionText: String) -> UIViewController {
-        let vc = NewPlantInputViewController(nibName: "NewPlantInputViewController", bundle: nil)
-        vc.loadViewIfNeeded() // without this, IBOutlets are nil
-//        vc.parentPageVC = self
+    private func fillUI() {
+        let inputList = viewModel!.inputList
         
-        switch type {
-        case .Name:
-            vc.inputTextField.isHidden = false
-        case .Location:
-            vc.inputTextField.isHidden = false
-        case .DatePicker:
-            vc.inputTextField.isHidden = false
-        case .Image:
-            vc.addImageButton.isHidden = false // show button
+        for i in 0..<orderedInputViewControllers!.count {
+            orderedInputViewControllers![i].viewModel = NewPlantInputTableViewCellViewModelForInput(inputList[i])
         }
-        
-        vc.inputTextField.placeholder = placeholderText
-        vc.instructionLabel.text = instructionText
-
-        return vc
     }
     
     func goToNextPage(sender: NewPlantInputViewController) {

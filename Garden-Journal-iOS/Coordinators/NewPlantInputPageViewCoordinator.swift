@@ -25,6 +25,7 @@ class NewPlantInputPageViewCoordinator: Coordinator {
         if let vc = newPlantInputPageViewController {
             vc.coordinator = self
             vc.setPages(pages)
+            vc.viewModel = NewPlantFormTableViewViewModel()
             navigationController.present(vc, animated: true, completion: nil)
         }
     }
@@ -35,16 +36,8 @@ class NewPlantInputPageViewCoordinator: Coordinator {
             newPage.loadViewIfNeeded()
             newPage.coordinator = self
             newPage.setInputIndex(i) // used for choosing view model data
-            newPage.viewModel = NewPlantFormTableViewViewModel()
             pages.append(newPage)
         }
-    }
-    
-    func addNewPhoto(from inputType: ImageInputType) {
-        let imagePickerCoordinator = ImagePickerCoordinator(navigationController: navigationController, type: inputType)
-        imagePickerCoordinator.parentCoordinator = self
-        childCoordinators.append(imagePickerCoordinator)
-        imagePickerCoordinator.start()
     }
     
     public func nextPage(sender: NewPlantInputViewController) {

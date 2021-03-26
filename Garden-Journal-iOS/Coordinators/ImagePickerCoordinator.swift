@@ -8,28 +8,28 @@
 import Foundation
 import UIKit
 
-class ImagePickerCoordinator: Coordinator {
-    var parentCoordinator: Coordinator?
-    var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
-    var type: ImageInputType
-    
-    init(navigationController: UINavigationController, type: ImageInputType) {
-        self.navigationController = navigationController
-        self.type = type
-    }
-    
-    func start() {
-//        let imagePickerController = ImagePicker()
-//        imagePickerController.type = self.type
-//        imagePickerController.coordinator = self
-//        navigationController.pushViewController(imagePickerController, animated: true)
-    }
-    
-    
-}
+//class ImagePickerCoordinator: Coordinator {
+//    var parentCoordinator: Coordinator?
+//    var childCoordinators = [Coordinator]()
+//    var navigationController: UINavigationController
+//    var type: ImageInputType
+//    
+//    init(navigationController: UINavigationController, type: ImageInputType) {
+//        self.navigationController = navigationController
+//        self.type = type
+//    }
+//    
+//    func start() {
+////        let imagePickerController = ImagePicker()
+////        imagePickerController.type = self.type
+////        imagePickerController.coordinator = self
+////        navigationController.pushViewController(imagePickerController, animated: true)
+//    }
+//    
+//    
+//}
 
-enum ImageInputType {
-    case Album
-    case Camera
-}
+//enum ImageInputType {
+//    case Album
+//    case Camera
+//}

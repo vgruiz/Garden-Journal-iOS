@@ -19,7 +19,6 @@ class NewPlantInputCoordinator: Coordinator {
     
     func start() {
         let newPlantInputViewController = NewPlantInputViewController.instantiate()
-//        newPlantInputViewController.coordinator = self
         navigationController.present(newPlantInputViewController, animated: true, completion: nil)
     }
     

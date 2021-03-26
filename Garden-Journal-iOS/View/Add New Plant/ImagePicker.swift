@@ -11,6 +11,11 @@ public protocol ImagePickerDelegate: class {
     func didSelect(image: UIImage?)
 }
 
+enum ImageInputType {
+    case Album
+    case Camera
+}
+
 open class ImagePicker: NSObject {
     
     var coordinator: Coordinator?
