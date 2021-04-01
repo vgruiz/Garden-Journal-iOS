@@ -11,7 +11,7 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
 
     var imagePicker: ImagePicker?
     var coordinator: NewPlantInputPageViewCoordinator?
-    var viewModel: NewPlantInputTableViewCellViewModelForInput! {
+    var viewModel: NewPlantInputViewModelForInput! {
         didSet {
             fillUI()
         }
@@ -23,7 +23,9 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
     @IBOutlet var instructionLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var addImageSecondaryButton: UIButton!
-
+    @IBOutlet var instructionBottomToSuperviewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet var finishButton: UIButton!
+    
     var screenWidth: CGFloat?
     
     lazy var locationsPickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth!, height: 216))
@@ -54,6 +56,11 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
         imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        finishButton.setEnabledWithAppearance( isValid: coordinator!.validateInputs() )
+    }
+    
     private func fillUI() {
         
         viewModel.locationsList?.bindAndFire{ [unowned self] in
@@ -62,17 +69,18 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
         
         switch viewModel.type {
         case .Name:
-            self.inputTextField.isHidden = false
+            inputTextField.isHidden = false
         case .Location:
-            self.inputTextField.isHidden = false
+            inputTextField.isHidden = false
             inputTextField.inputView = locationsPickerView
             inputTextField.inputAccessoryView = locationsPickerAccessoryView
             locationsPickerView.delegate = self
         case .DatePicker:
-            self.inputTextField.isHidden = false
+            inputTextField.isHidden = false
             inputTextField.setInputViewDatePicker(target: self, selector: #selector(tapDoneDatePicker))
         case .Image:
-            self.addImageButton.isHidden = false // show button
+            addImageButton.isHidden = false // show button
+            finishButton.isHidden = false
         }
         inputTextField.placeholder = viewModel.placeholderText
         instructionLabel.text = viewModel.instructionText
@@ -86,6 +94,15 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
         imagePicker?.present(from: self.view)
     }
     
+    @IBAction func finishButtonPressed(_ sender: Any) {
+        if coordinator!.validateInputs() {
+            coordinator?.createNewPlantProfile()
+        } else {
+            print("there is a problem with the input")
+            // TODO: - bad input user experience
+        }
+    }
+    
     @objc func tapDoneDatePicker() {
         if let datePicker = inputTextField.inputView as? UIDatePicker {
             let dateFormatter = DateFormatter()
@@ -93,11 +110,13 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
             self.inputTextField.text = dateFormatter.string(from: datePicker.date)
         }
         inputTextField.resignFirstResponder()
+        coordinator?.nextPage(sender: self)
     }
     
     @objc func tapDoneOnLocationPicker() {
         // TODO: Input validation if it's a custom input
         inputTextField.resignFirstResponder()
+        coordinator?.nextPage(sender: self)
     }
     
     @objc func switchToKeyboardWithAccessoryView() {
@@ -107,6 +126,17 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
     @objc func switchToPickerViewInput() {
         inputTextField.setInputView(as: locationsPickerView, withAccessory: locationsPickerAccessoryView)
     }
+    
+    func isInputValid() -> Bool {
+        let validator = Validator()
+        switch viewModel.type {
+        case .Name, .Location, .DatePicker:
+            return validator.isAlphanumeric(inputTextField.text ?? "")
+        case .Image:
+            // Image is not required
+            return true
+        }
+    }
 }
 
 extension NewPlantInputViewController: UITextFieldDelegate {
@@ -114,6 +144,10 @@ extension NewPlantInputViewController: UITextFieldDelegate {
         inputTextField.resignFirstResponder()
         coordinator?.nextPage(sender: self)
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        instructionBottomToSuperviewBottomConstraint.constant = 350
     }
 }
 
@@ -135,7 +169,7 @@ extension NewPlantInputViewController : UIPickerViewDelegate, UIPickerViewDataSo
         return (locations?.count ?? 0 ) + 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView,  titleForRow row: Int, forComponent component: Int) -> String? {
         if row == 0 {
             return ""
         } else {
@@ -149,3 +183,4 @@ extension NewPlantInputViewController : UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
 }
+

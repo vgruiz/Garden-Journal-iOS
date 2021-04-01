@@ -12,26 +12,33 @@ class HomeTableViewViewModel {
     
 //    let context = CoreDataManager().moc
     private let coreDataManager = CoreDataManager()
-    var plantList: [Observable<Plant>]?
+    var plantList: [Observable<Plant>]? {
+        get {
+            return getRefreshedPlantList()
+        }
+    }
     
     // MARK: Init
     
     init() {
-        InMemoryObjects().loadDemoPlantList()
-        let plants = coreDataManager.fetchPlants()
-        print( "number of plants: \(plants.count)")
-//        plantList = plants.map({ (plant) -> Observable<Plant> in
+        if coreDataManager.isEmpty() {
+            InMemoryObjects().loadDemoPlantList()
+        }
+//        let plants = coreDataManager.fetchPlants()
+//        plantList = plants.compactMap { (plant) -> Observable<Plant>? in
 //            return Observable(plant)
-//        })
-        
-        plantList = plants.compactMap { (plant) -> Observable<Plant>? in
+//        }
+//        plantList = getRefreshedPlantList()
+    }
+    
+    func getRefreshedPlantList() -> [Observable<Plant>] {
+        let plants = coreDataManager.fetchPlants()
+        let observablePlantList = plants.compactMap { (plant) -> Observable<Plant>? in
             return Observable(plant)
         }
-        print( "plantList.count: \(plantList?.count)")
+        return observablePlantList
     }
     
-    func tappedAddPlantButton() {
-        
-    }
     
 }
+

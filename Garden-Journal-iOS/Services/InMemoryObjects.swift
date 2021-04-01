@@ -15,20 +15,19 @@ class InMemoryObjects {
     private let coreDataManager = CoreDataManager()
     
     func loadDemoPlantList() {
-        
-        coreDataManager.savePlant(name: "Planty",
+        _ = coreDataManager.savePlant(name: "Planty",
                                   adoptionDate: Date(),
                                   location: "Bedroom",
                                   imageData: UIImage(named: "bonsai0")?.jpegData(compressionQuality: 1.0),
                                   pinnedNotes: nil)
         
-        coreDataManager.savePlant(name: "Planteen",
+        _ = coreDataManager.savePlant(name: "Planteen",
                                   adoptionDate: Date(),
                                   location: "Backyard",
                                   imageData: UIImage(named: "bonsai1")?.jpegData(compressionQuality: 1.0),
                                   pinnedNotes: nil)
         
-        coreDataManager.savePlant(name: "Plantoo",
+        _ = coreDataManager.savePlant(name: "Plantoo",
                                   adoptionDate: Date(),
                                   location: "Office",
                                   imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),

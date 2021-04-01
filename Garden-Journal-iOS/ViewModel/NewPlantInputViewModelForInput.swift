@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NewPlantInputTableViewCellViewModelForInput : NewPlantInputTableViewCellViewModel {
+class NewPlantInputViewModelForInput : NewPlantInputViewModel {
 
     var type: InputType
     var placeholderText: String?

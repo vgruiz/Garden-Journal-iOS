@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class NewPlantInputPageViewCoordinator: Coordinator {
-    var parentCoordinator: Coordinator?
+    var parentCoordinator: MainCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     var pages = [NewPlantInputViewController]()
@@ -25,7 +25,7 @@ class NewPlantInputPageViewCoordinator: Coordinator {
         if let vc = newPlantInputPageViewController {
             vc.coordinator = self
             vc.setPages(pages)
-            vc.viewModel = NewPlantFormTableViewViewModel()
+            vc.viewModel = NewPlantInputPageViewModel()
             navigationController.present(vc, animated: true, completion: nil)
         }
     }
@@ -42,6 +42,19 @@ class NewPlantInputPageViewCoordinator: Coordinator {
     
     public func nextPage(sender: NewPlantInputViewController) {
         newPlantInputPageViewController?.goToNextPage(sender: sender)
+    }
+    
+    public func validateInputs() -> Bool {
+       return newPlantInputPageViewController!.isInputValid()
+    }
+    
+    func createNewPlantProfile() {
+        newPlantInputPageViewController?.createNewPlant()
+    }
+    
+    func finishAddingPlant(index: Int) {
+        parentCoordinator?.refreshAndGoToNewProfile( index: index ) // or something like that
+        parentCoordinator?.childDidFinish(self)
     }
     
 }

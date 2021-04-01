@@ -23,8 +23,17 @@ class HomeViewController: UIViewController, Storyboarded {
         navigationItem.rightBarButtonItem = addPlantButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        homeTableView.reloadData()
+    }
+    
     @objc func addPlantButtonPressed() {
         coordinator?.addNewPlant()
+    }
+    
+    func refreshTableView() {
+        homeTableView.reloadData()
     }
 
 }

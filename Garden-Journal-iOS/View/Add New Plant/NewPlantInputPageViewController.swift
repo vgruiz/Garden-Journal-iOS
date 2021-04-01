@@ -10,7 +10,7 @@ import UIKit
 class NewPlantInputPageViewController: UIPageViewController, UIPageViewControllerDelegate, Storyboarded {
     
     var coordinator: NewPlantInputPageViewCoordinator?
-    var viewModel: NewPlantFormTableViewViewModel? {
+    var viewModel: NewPlantInputPageViewModel? {
         didSet {
             fillUI()
         }
@@ -32,14 +32,13 @@ class NewPlantInputPageViewController: UIPageViewController, UIPageViewControlle
     
     public func setPages(_ pages: [NewPlantInputViewController]) {
         orderedInputViewControllers = pages
-        
     }
     
     private func fillUI() {
         let inputList = viewModel!.inputList
         
         for i in 0..<orderedInputViewControllers!.count {
-            orderedInputViewControllers![i].viewModel = NewPlantInputTableViewCellViewModelForInput(inputList[i])
+            orderedInputViewControllers![i].viewModel = NewPlantInputViewModelForInput(inputList[i])
         }
     }
     
@@ -59,9 +58,38 @@ class NewPlantInputPageViewController: UIPageViewController, UIPageViewControlle
         }
 
         self.setViewControllers([orderedInputViewControllers![nextIndex]], direction: .forward, animated: true, completion: nil)
+    }
 
+    func isInputValid() -> Bool {
+        // required: name, date of adoption, location
+        var isValid = true
+        for vc in orderedInputViewControllers! {
+            if (vc.viewModel.type != .Image) {
+                isValid = isValid && vc.isInputValid()
+            }
+        }
+        return isValid
     }
     
+    func createNewPlant() {
+        guard let pages = orderedInputViewControllers else {
+            fatalError("Fatal error accessing orderedInputViewControllers")
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+
+        guard let _name = pages[0].inputTextField.text,
+              let _date = formatter.date(from: pages[1].inputTextField.text! ),
+              let _location = pages[2].inputTextField.text,
+              let _data = pages[3].imageView.image?.pngData(),
+              let index = viewModel?.savePlant(name: _name, adoptionDate: _date, location: _location, imageData: _data, pinnedNotes: nil)
+        else {
+            fatalError("Fatal error while creating a new plant.")
+        }
+        
+        coordinator?.finishAddingPlant(index: index)
+    }
 }
 
 extension NewPlantInputPageViewController: UIPageViewControllerDataSource {
