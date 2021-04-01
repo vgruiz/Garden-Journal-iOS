@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A736F25E60CCD009268B8 /* InMemoryObjects.swift */; };
-		292DE40B25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE40A25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift */; };
-		292DE40E25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE40D25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift */; };
-		292DE41125F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41025F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift */; };
+		292DE40B25F5DDE70070A777 /* NewPlantInputPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE40A25F5DDE70070A777 /* NewPlantInputPageViewModel.swift */; };
+		292DE40E25F723DE0070A777 /* NewPlantInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE40D25F723DE0070A777 /* NewPlantInputViewModel.swift */; };
+		292DE41125F726F70070A777 /* NewPlantInputViewModelForInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41025F726F70070A777 /* NewPlantInputViewModelForInput.swift */; };
 		292DE41525F9D3900070A777 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41425F9D3900070A777 /* UITextField+Ext.swift */; };
 		292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE41E25FEE12C0070A777 /* ImagePicker.swift */; };
 		292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */; };
@@ -39,15 +39,17 @@
 		2946C19A25E345B600268123 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19925E345B600268123 /* HomeTableView.swift */; };
 		2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */; };
 		2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19F25E3672200268123 /* CoreDataManager.swift */; };
-		29489D7326080089003BB098 /* NewPlantInputCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29489D7226080089003BB098 /* NewPlantInputCoordinator.swift */; };
+		29ED25592612D5EA0066CD5A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED25582612D5EA0066CD5A /* Validator.swift */; };
+		29ED255F2612E0090066CD5A /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED255E2612E0090066CD5A /* UIColor+ext.swift */; };
+		29ED25622612E7D50066CD5A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED25612612E7D50066CD5A /* UIButton+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		292A736F25E60CCD009268B8 /* InMemoryObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryObjects.swift; sourceTree = "<group>"; };
 		292DE40325F0A6300070A777 /* InputStruct.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = InputStruct.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		292DE40A25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantFormTableViewViewModel.swift; sourceTree = "<group>"; };
-		292DE40D25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputTableViewCellViewModel.swift; sourceTree = "<group>"; };
-		292DE41025F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputTableViewCellViewModelForInput.swift; sourceTree = "<group>"; };
+		292DE40A25F5DDE70070A777 /* NewPlantInputPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputPageViewModel.swift; sourceTree = "<group>"; };
+		292DE40D25F723DE0070A777 /* NewPlantInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputViewModel.swift; sourceTree = "<group>"; };
+		292DE41025F726F70070A777 /* NewPlantInputViewModelForInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputViewModelForInput.swift; sourceTree = "<group>"; };
 		292DE41425F9D3900070A777 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		292DE41E25FEE12C0070A777 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Ext.swift"; sourceTree = "<group>"; };
@@ -78,7 +80,9 @@
 		2946C19925E345B600268123 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewViewModel.swift; sourceTree = "<group>"; };
 		2946C19F25E3672200268123 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		29489D7226080089003BB098 /* NewPlantInputCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputCoordinator.swift; sourceTree = "<group>"; };
+		29ED25582612D5EA0066CD5A /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		29ED255E2612E0090066CD5A /* UIColor+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
+		29ED25612612E7D50066CD5A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,10 @@
 		292DE41325F9D3760070A777 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				29ED255E2612E0090066CD5A /* UIColor+ext.swift */,
 				292DE41425F9D3900070A777 /* UITextField+Ext.swift */,
 				292DE42125FEEEDC0070A777 /* UIVIew+Ext.swift */,
+				29ED25612612E7D50066CD5A /* UIButton+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,12 +118,11 @@
 		2931BA9825EB47FD0016F841 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				2931BA9925EB48230016F841 /* MainCoordinator.swift */,
 				2931BAA025EB48710016F841 /* Storyboarded.swift */,
 				2931BA9D25EB48300016F841 /* Coordinator.swift */,
+				2931BA9925EB48230016F841 /* MainCoordinator.swift */,
 				2931BAA725EB50C60016F841 /* PlantProfileCoordinator.swift */,
 				292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */,
-				29489D7226080089003BB098 /* NewPlantInputCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				2946C17E25E329D500268123 /* Model */,
 				2946C17C25E329CA00268123 /* View */,
 				2931BA9825EB47FD0016F841 /* Coordinators */,
+				29ED255B2612D5F20066CD5A /* Utilities */,
 				292A736E25E60C9C009268B8 /* Services */,
 				292DE40325F0A6300070A777 /* InputStruct.playground */,
 			);
@@ -215,11 +221,19 @@
 				2931BAAE25EC6AB00016F841 /* PlantProfileViewModel.swift */,
 				2931BAB125EC717D0016F841 /* PlantProfileViewModelForPlant.swift */,
 				2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */,
-				292DE40A25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift */,
-				292DE40D25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift */,
-				292DE41025F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift */,
+				292DE40A25F5DDE70070A777 /* NewPlantInputPageViewModel.swift */,
+				292DE40D25F723DE0070A777 /* NewPlantInputViewModel.swift */,
+				292DE41025F726F70070A777 /* NewPlantInputViewModelForInput.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		29ED255B2612D5F20066CD5A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				29ED25582612D5EA0066CD5A /* Validator.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,18 +310,20 @@
 			files = (
 				292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */,
 				2931BAB225EC717D0016F841 /* PlantProfileViewModelForPlant.swift in Sources */,
-				292DE40B25F5DDE70070A777 /* NewPlantFormTableViewViewModel.swift in Sources */,
+				292DE40B25F5DDE70070A777 /* NewPlantInputPageViewModel.swift in Sources */,
 				2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */,
+				29ED25592612D5EA0066CD5A /* Validator.swift in Sources */,
+				29ED25622612E7D50066CD5A /* UIButton+Ext.swift in Sources */,
 				2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */,
-				292DE40E25F723DE0070A777 /* NewPlantInputTableViewCellViewModel.swift in Sources */,
-				292DE41125F726F70070A777 /* NewPlantInputTableViewCellViewModelForInput.swift in Sources */,
+				292DE40E25F723DE0070A777 /* NewPlantInputViewModel.swift in Sources */,
+				292DE41125F726F70070A777 /* NewPlantInputViewModelForInput.swift in Sources */,
 				2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */,
 				2946C19225E33A6D00268123 /* PlantTableViewCellViewModelFromPlant.swift in Sources */,
 				2931BAAC25EB512A0016F841 /* PlantProfileViewController.swift in Sources */,
+				29ED255F2612E0090066CD5A /* UIColor+ext.swift in Sources */,
 				2946C18325E32ACF00268123 /* Observable.swift in Sources */,
 				2946C19A25E345B600268123 /* HomeTableView.swift in Sources */,
 				2946C18E25E3376900268123 /* PlantTableViewCell.swift in Sources */,
-				29489D7326080089003BB098 /* NewPlantInputCoordinator.swift in Sources */,
 				2946C19625E33B8600268123 /* PlantTableViewCellViewModel.swift in Sources */,
 				2946C16F25E329C100268123 /* Garden_Journal_iOS.xcdatamodeld in Sources */,
 				292DE450260308540070A777 /* NewPlantInputPageViewController.swift in Sources */,
