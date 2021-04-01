@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NewPlantFormTableViewViewModel {
+class NewPlantInputPageViewModel {
     var inputList = [NewPlantInput]()
     
     private let coreDataManager = CoreDataManager()
@@ -41,6 +41,10 @@ class NewPlantFormTableViewViewModel {
         inputList.append(input1)
         inputList.append(input2)
         inputList.append(input3)
+    }
+    
+    func savePlant(name: String, adoptionDate: Date, location: String, imageData: Data?, pinnedNotes: String?) -> Int {
+        return coreDataManager.savePlant(name: name, adoptionDate: adoptionDate, location: location, imageData: imageData, pinnedNotes: pinnedNotes)
     }
     
 }

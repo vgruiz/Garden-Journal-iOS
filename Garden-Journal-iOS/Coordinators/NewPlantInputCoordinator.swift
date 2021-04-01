@@ -2,7 +2,7 @@
 //  NewPlantInputCoordinator.swift
 //  Garden-Journal-iOS
 //
-//  Created by Victor Ruiz on 3/17/21.
+//  Created by Victor Ruiz on 3/21/21.
 //
 
 import Foundation
@@ -18,9 +18,9 @@ class NewPlantInputCoordinator: Coordinator {
     }
     
     func start() {
-        let newPlantInputPageViewController = NewPlantInputPageViewController.instantiate()
-        newPlantInputPageViewController.coordinator = self
-        navigationController.present(newPlantInputPageViewController, animated: true, completion: nil)
+        let newPlantInputViewController = NewPlantInputViewController.instantiate()
+        navigationController.present(newPlantInputViewController, animated: true, completion: nil)
     }
+    
     
 }

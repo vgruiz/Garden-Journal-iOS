@@ -12,6 +12,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var parentCoordinator: Coordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    var homeViewController: HomeViewController!
   
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -19,7 +20,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     func start() {
         navigationController.delegate = self
-        let homeViewController = HomeViewController.instantiate()
+        homeViewController = HomeViewController.instantiate()
         homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: false)
     }
@@ -32,11 +33,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
     
     func addNewPlant() {
-//        let addNewPlantCoordinator = AddNewPlantCoordinator(navigationController: navigationController)
-//        addNewPlantCoordinator.parentCoordinator = self
-//        childCoordinators.append(addNewPlantCoordinator)
-//        addNewPlantCoordinator.start()
-        let newPlantInputCoordinator = NewPlantInputCoordinator(navigationController: navigationController)
+        let newPlantInputCoordinator = NewPlantInputPageViewCoordinator(navigationController: navigationController)
         newPlantInputCoordinator.parentCoordinator = self
         childCoordinators.append(newPlantInputCoordinator)
         newPlantInputCoordinator.start()
@@ -52,9 +49,10 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         }
     }
     
-    
+    func refreshAndGoToNewProfile(index: Int) {
+        navigationController.dismiss(animated: true) {
+            self.homeViewController.refreshTableView()
+        }
+        self.goToPlantProfile(forPlantIndexPath: IndexPath(item: index, section: 0))
+    }
 }
-
-//extension MainCoordinator: UINavigationControllerDelegate, NSObject {
-//
-//}

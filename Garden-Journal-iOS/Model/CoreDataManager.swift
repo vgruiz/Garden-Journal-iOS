@@ -26,7 +26,7 @@ final class CoreDataManager {
         persistentContainer.viewContext
     }
     
-    func savePlant(name: String, adoptionDate: Date, location: String, imageData: Data?, pinnedNotes: String?) {
+    func savePlant(name: String, adoptionDate: Date, location: String, imageData: Data?, pinnedNotes: String?) -> Int {
         let plant = Plant(entity: plantEntityDesc, insertInto: moc)
         plant.name = name
         plant.adoptionDate = adoptionDate
@@ -43,6 +43,26 @@ final class CoreDataManager {
             print( "Error saving core data: \(error)")
         }
         
+        return indexOf(plant: plant)
+    }
+    
+    func createNewPlant( name: String, adoptionDate: Date, location: String, imageData: Data?, pinnedNotes: String? ) -> Plant {
+        let plant = Plant(entity: plantEntityDesc, insertInto: moc)
+        plant.name = name
+        plant.adoptionDate = adoptionDate
+        plant.location = location
+        
+        if let data = imageData {
+            plant.profileImageData = data
+        }
+        plant.pinnedNotes = pinnedNotes ?? ""
+        
+        return plant
+    }
+    
+    func isEmpty() -> Bool {
+        let plants = fetchPlants()
+        return plants.isEmpty
     }
     
     func fetchPlants() -> [Plant] {
@@ -54,5 +74,10 @@ final class CoreDataManager {
             print("Error fetching Plants: \(error)")
             return []
         }
+    }
+    
+    func indexOf(plant: Plant) -> Int {
+        let plants = fetchPlants()
+        return (plants.firstIndex(of: plant) ?? 0) as Int
     }
 }

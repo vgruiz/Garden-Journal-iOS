@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NewPlantInputTableViewCellViewModel {
+protocol NewPlantInputViewModel {
     var type: InputType { get }
     var placeholderText: String? { get }
     var instructionText: String { get }
