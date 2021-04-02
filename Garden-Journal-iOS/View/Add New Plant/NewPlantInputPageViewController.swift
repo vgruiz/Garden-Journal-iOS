@@ -79,16 +79,22 @@ class NewPlantInputPageViewController: UIPageViewController, UIPageViewControlle
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
 
+        // guard let for required fields
         guard let _name = pages[0].inputTextField.text,
               let _date = formatter.date(from: pages[1].inputTextField.text! ),
-              let _location = pages[2].inputTextField.text,
-              let _data = pages[3].imageView.image?.pngData(),
-              let index = viewModel?.savePlant(name: _name, adoptionDate: _date, location: _location, imageData: _data, pinnedNotes: nil)
+              let _location = pages[2].inputTextField.text
         else {
             fatalError("Fatal error while creating a new plant.")
         }
         
-        coordinator?.finishAddingPlant(index: index)
+        let _data = pages[3].imageView.image?.pngData() ?? nil
+        
+        if let index = viewModel?.savePlant(name: _name, adoptionDate: _date, location: _location, imageData: _data, pinnedNotes: nil) {
+
+            coordinator?.finishAddingPlant(index: index)
+            
+        }
+        
     }
 }
 

@@ -16,27 +16,22 @@ class PlantProfileViewModelForPlant: PlantProfileViewModel {
     // MARK: PlantProfileViewModel protocol
     
     var name: Observable<String>
-//    var location: Observable<String>
-//    var adoptionDate: Observable<Date>
+    var location: Observable<String>
+    var adoptionDate: Observable<Date>
 //    var pinnedNotes: Observable<String>
-//    var profileImageData: Observable<Data>
+    var profileImageData: Observable<Data>?
 
     // MARK: Init
 
     init(forPlantIndexPath indexPath: IndexPath) {
         let plant = Observable(coreDataManager.fetchPlants()[indexPath.row])
         self.name = Observable(plant.value.name!)
+        self.location = Observable(plant.value.location!)
+        self.adoptionDate = Observable(plant.value.adoptionDate!)
+//        self.pinnedNotes = Observable(plant.value.pinnedNotes)
+        if let data = plant.value.profileImageData {
+            self.profileImageData = Observable(data)
+        }
     }
     
-//    init(forPlant plant: Observable<Plant>) {
-////        self.plant = plant
-//        let plantVal = plant.value
-//        self.name = Observable(plantVal.name!)
-////        self.location = Observable(plantVal.location)
-////        self.adoptionDate = Observable(plantVal.adoptionDate)
-////        self.pinnedNotes = Observable(plantVal.pinnedNotes)
-////        self.profileImageData = Observable(plantVal.profileImageData)
-//    }
-
-
 }

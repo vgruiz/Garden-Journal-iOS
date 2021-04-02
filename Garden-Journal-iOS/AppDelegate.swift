@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Documents directory: ", FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask))
         
         let navigationController = UINavigationController()
+        UINavigationBar.appearance().barTintColor = MyColor.sharedMyColor.activeColorSceheme.color0
+        
         coordinator = MainCoordinator(navigationController: navigationController)
         coordinator?.start()
         

@@ -67,32 +67,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mr3-PA-KcW">
-                                <rect key="frame" x="141" y="100" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJe-Ht-LRy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="242"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="These are pinned notes about this plant, probably about its care." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cID-tF-WFn">
+                                <rect key="frame" x="154" y="302" width="240" height="58"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="QcG-0g-9l4"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hw9-pJ-6Iu">
+                                <rect key="frame" x="0.0" y="419" width="414" height="443"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="DhC-xS-ggE" kind="embed" id="g15-Ta-ZnA"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mr3-PA-KcW">
+                                <rect key="frame" x="20" y="302" width="119" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aK4-ei-mDT"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YJe-Ht-LRy" firstAttribute="top" secondItem="aK4-ei-mDT" secondAttribute="top" id="DwY-ns-mrT"/>
+                            <constraint firstItem="mr3-PA-KcW" firstAttribute="leading" secondItem="bAq-6r-AuZ" secondAttribute="leading" constant="20" symbolic="YES" id="Fd9-he-M7J"/>
+                            <constraint firstItem="cID-tF-WFn" firstAttribute="height" secondItem="mr3-PA-KcW" secondAttribute="height" multiplier="2" id="Ued-Wr-NLV"/>
+                            <constraint firstItem="mr3-PA-KcW" firstAttribute="top" secondItem="YJe-Ht-LRy" secondAttribute="bottom" constant="16" id="Zwt-v4-6Ko"/>
+                            <constraint firstItem="cID-tF-WFn" firstAttribute="top" secondItem="YJe-Ht-LRy" secondAttribute="bottom" constant="16" id="epR-1M-ltL"/>
+                            <constraint firstItem="cID-tF-WFn" firstAttribute="leading" secondItem="mr3-PA-KcW" secondAttribute="trailing" constant="15" id="lLD-Q9-V3g"/>
+                            <constraint firstAttribute="trailing" secondItem="YJe-Ht-LRy" secondAttribute="trailing" id="nNt-UP-woy"/>
+                            <constraint firstItem="YJe-Ht-LRy" firstAttribute="leading" secondItem="bAq-6r-AuZ" secondAttribute="leading" id="qpb-HB-vhb"/>
+                            <constraint firstItem="aK4-ei-mDT" firstAttribute="trailing" secondItem="cID-tF-WFn" secondAttribute="trailing" constant="20" id="vYe-DC-jiV"/>
+                            <constraint firstItem="YJe-Ht-LRy" firstAttribute="height" secondItem="bAq-6r-AuZ" secondAttribute="height" multiplier="0.27" id="yvd-EO-41y"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="tmpLabel" destination="mr3-PA-KcW" id="kFH-a6-Hp6"/>
+                        <outlet property="nameLabel" destination="mr3-PA-KcW" id="kFH-a6-Hp6"/>
+                        <outlet property="pinnedNotesTextView" destination="cID-tF-WFn" id="EXk-Au-4hD"/>
+                        <outlet property="profileImageView" destination="YJe-Ht-LRy" id="qPi-Vy-AqQ"/>
+                        <outlet property="updatesEmbeddedPageViewController" destination="hw9-pJ-6Iu" id="Zjv-Eh-4Bg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecS-yp-TAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1514" y="117"/>
+            <point key="canvasLocation" x="1513.0434782608697" y="116.51785714285714"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="deO-8S-Z5T">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="DhC-xS-ggE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3In-WM-hVO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2323" y="258"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

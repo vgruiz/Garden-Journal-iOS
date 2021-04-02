@@ -11,9 +11,12 @@ class PlantProfileViewController: UIViewController, Storyboarded {
 
     weak var coordinator: Coordinator?
     var plantIndexPath: IndexPath?
-    @IBOutlet var tmpLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var pinnedNotesTextView: UITextView!
+    @IBOutlet var updatesEmbeddedPageViewController: UIView!
     
-    var viewModel: PlantProfileViewModel? {
+    var viewModel: PlantProfileViewModelForPlant? {
         didSet {
             fillUI()
         }
@@ -34,9 +37,20 @@ class PlantProfileViewController: UIViewController, Storyboarded {
         }
         
         viewModel.name.bindAndFire { [unowned self] in
-            self.tmpLabel.text = $0
+            self.nameLabel.text = $0
         }
         
+//        viewModel.location.bindAndFire{ [unowned self] in
+//            self.locationLabel.text = $0
+//        }
+        
+//        viewModel.adoptionDate.bindAndFire{ [unowned self] in
+//            self.adoptionDateLabelOrSomething.text = $0.text
+//        }
+  
+        viewModel.profileImageData?.bindAndFire { [unowned self]  in
+            self.profileImageView.image = UIImage(data: $0)
+        }
     }
 
 }

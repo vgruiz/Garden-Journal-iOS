@@ -51,6 +51,7 @@ class NewPlantInputViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = MyColor.sharedMyColor.activeColorSceheme.color4
         screenWidth = UIScreen.main.bounds.width
         inputTextField.delegate = self
         imagePicker = ImagePicker(presentationController: self, delegate: self)

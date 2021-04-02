@@ -11,10 +11,9 @@ import UIKit
 extension UIButton {
     func setEnabledWithAppearance(isValid: Bool) {
         if !isValid {
-            self.backgroundColor = UIColor.systemGray
+            self.backgroundColor = MyColor.disabledGray
         } else {
-            //self.backgroundColor = App.greenButtonColor or something like that
-            self.backgroundColor = UIColor.init(red: 6, green: 94, blue: 24)
+            self.backgroundColor = MyColor.sharedMyColor.activeColorSceheme.color1
         }
         self.isEnabled = isValid
     }

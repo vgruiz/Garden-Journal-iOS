@@ -22,7 +22,14 @@ class PlantTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        plantCellImageView.layer.shadowPath = UIBezierPath(rect: plantCellImageView.bounds).cgPath
         plantCellImageView.layer.cornerRadius = 20
+        plantCellImageView.layer.masksToBounds = true
+        plantCellImageView.layer.shouldRasterize = true
+        plantCellImageView.layer.shadowColor = UIColor.black.cgColor
+        plantCellImageView.layer.shadowOpacity = 1
+        plantCellImageView.layer.shadowOffset = .init(width: 5, height: 5)
+        plantCellImageView.layer.shadowRadius = 10
         NSLayoutConstraint.activate([
             contentView.heightAnchor.constraint(equalToConstant: PlantTableViewCell.cellHeight)
         ])
