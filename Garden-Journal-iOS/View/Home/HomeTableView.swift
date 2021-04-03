@@ -37,7 +37,10 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print( viewModel.plantList?[indexPath.row].value.name ?? "no name I guess" )
-        coordinator?.goToPlantProfile(forPlantIndexPath: indexPath)
+//        coordinator?.goToPlantProfile(forPlantIndexPath: indexPath)
+        if let plant = viewModel.plantList?[indexPath.row].value {
+            coordinator?.goToPlantProfile(forPlant: plant )
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

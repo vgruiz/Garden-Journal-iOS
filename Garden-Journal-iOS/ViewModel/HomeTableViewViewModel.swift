@@ -10,7 +10,6 @@ import CoreData
 
 class HomeTableViewViewModel {
     
-//    let context = CoreDataManager().moc
     private let coreDataManager = CoreDataManager()
     var plantList: [Observable<Plant>]? {
         get {
@@ -19,16 +18,10 @@ class HomeTableViewViewModel {
     }
     
     // MARK: Init
-    
     init() {
-        if coreDataManager.isEmpty() {
+        if coreDataManager.isPlantListEmpty() {
             InMemoryObjects().loadDemoPlantList()
         }
-//        let plants = coreDataManager.fetchPlants()
-//        plantList = plants.compactMap { (plant) -> Observable<Plant>? in
-//            return Observable(plant)
-//        }
-//        plantList = getRefreshedPlantList()
     }
     
     func getRefreshedPlantList() -> [Observable<Plant>] {
@@ -39,6 +32,4 @@ class HomeTableViewViewModel {
         return observablePlantList
     }
     
-    
 }
-

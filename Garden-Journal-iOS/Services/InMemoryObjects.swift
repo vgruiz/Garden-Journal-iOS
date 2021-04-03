@@ -34,4 +34,32 @@ class InMemoryObjects {
                                   pinnedNotes: nil)
     }
     
+    func loadDemoUpdatesList(for plant: Plant) {
+        coreDataManager.saveUpdate(for: plant,
+                                       note: "Plant is gud.",
+                                       date: Date(),
+                                       imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
+                                       work: coreDataManager.newPlantWork(workName0: "Watered", workName1: "Repotted"))
+        coreDataManager.saveUpdate(for: plant,
+                                       note: "Plant is dandy.",
+                                       date: Date(),
+                                       imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
+                                       work: coreDataManager.newPlantWork(workName0: "Watered", workName1: "Repotted"))
+        coreDataManager.saveUpdate(for: plant,
+                                       note: "Plant is superb.",
+                                       date: Date(),
+                                       imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
+                                       work: coreDataManager.newPlantWork(workName0: "Watered", workName1: "Repotted"))
+        coreDataManager.saveUpdate(for: plant,
+                                       note: "Plant is bad.",
+                                       date: Date(),
+                                       imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
+                                       work: coreDataManager.newPlantWork(workName0: "Watered", workName1: "Repotted"))
+        coreDataManager.saveUpdate(for: plant,
+                                       note: "Plant is better.",
+                                       date: Date(),
+                                       imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
+                                       work: coreDataManager.newPlantWork(workName0: "Watered", workName1: "Repotted"))
+    }
+    
 }

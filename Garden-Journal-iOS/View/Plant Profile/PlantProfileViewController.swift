@@ -11,10 +11,14 @@ class PlantProfileViewController: UIViewController, Storyboarded {
 
     weak var coordinator: Coordinator?
     var plantIndexPath: IndexPath?
+    
+    var pageViewViewControllers = [UIViewController]()
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var pinnedNotesTextView: UITextView!
     @IBOutlet var updatesEmbeddedPageViewController: UIView!
+    
     
     var viewModel: PlantProfileViewModelForPlant? {
         didSet {
@@ -40,6 +44,7 @@ class PlantProfileViewController: UIViewController, Storyboarded {
             self.nameLabel.text = $0
         }
         
+        
 //        viewModel.location.bindAndFire{ [unowned self] in
 //            self.locationLabel.text = $0
 //        }
@@ -51,6 +56,10 @@ class PlantProfileViewController: UIViewController, Storyboarded {
         viewModel.profileImageData?.bindAndFire { [unowned self]  in
             self.profileImageView.image = UIImage(data: $0)
         }
+    }
+    
+    func setChildViewControllers( children: [UIViewController]) {
+        pageViewViewControllers = children
     }
 
 }

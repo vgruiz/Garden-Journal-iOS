@@ -39,6 +39,15 @@
 		2946C19A25E345B600268123 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19925E345B600268123 /* HomeTableView.swift */; };
 		2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */; };
 		2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19F25E3672200268123 /* CoreDataManager.swift */; };
+		29906A052618246600C8D188 /* UpdatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A032618246600C8D188 /* UpdatesTableViewController.swift */; };
+		29906A062618246600C8D188 /* UpdatesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29906A042618246600C8D188 /* UpdatesTableViewController.xib */; };
+		29906A0A2618248100C8D188 /* UpdatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */; };
+		29906A0B2618248100C8D188 /* UpdatesCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */; };
+		29A0618B26182CA8009593AD /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0618926182CA8009593AD /* UpdateTableViewCell.swift */; };
+		29A0618C26182CA8009593AD /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29A0618A26182CA8009593AD /* UpdateTableViewCell.xib */; };
+		29A0618F26182EA0009593AD /* UpdatesTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */; };
+		29A0619226183053009593AD /* UpdateTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0619126183053009593AD /* UpdateTableViewCellViewModel.swift */; };
+		29A06195261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A06194261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift */; };
 		29ED25592612D5EA0066CD5A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED25582612D5EA0066CD5A /* Validator.swift */; };
 		29ED255F2612E0090066CD5A /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED255E2612E0090066CD5A /* UIColor+ext.swift */; };
 		29ED25622612E7D50066CD5A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED25612612E7D50066CD5A /* UIButton+Ext.swift */; };
@@ -80,6 +89,15 @@
 		2946C19925E345B600268123 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewViewModel.swift; sourceTree = "<group>"; };
 		2946C19F25E3672200268123 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		29906A032618246600C8D188 /* UpdatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewController.swift; sourceTree = "<group>"; };
+		29906A042618246600C8D188 /* UpdatesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatesTableViewController.xib; sourceTree = "<group>"; };
+		29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesCollectionViewController.swift; sourceTree = "<group>"; };
+		29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatesCollectionViewController.xib; sourceTree = "<group>"; };
+		29A0618926182CA8009593AD /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
+		29A0618A26182CA8009593AD /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
+		29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewViewModel.swift; sourceTree = "<group>"; };
+		29A0619126183053009593AD /* UpdateTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		29A06194261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCellViewModelForUpdate.swift; sourceTree = "<group>"; };
 		29ED25582612D5EA0066CD5A /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		29ED255E2612E0090066CD5A /* UIColor+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		29ED25612612E7D50066CD5A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
@@ -142,6 +160,12 @@
 			isa = PBXGroup;
 			children = (
 				2931BAAB25EB512A0016F841 /* PlantProfileViewController.swift */,
+				29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */,
+				29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */,
+				29906A032618246600C8D188 /* UpdatesTableViewController.swift */,
+				29906A042618246600C8D188 /* UpdatesTableViewController.xib */,
+				29A0618926182CA8009593AD /* UpdateTableViewCell.swift */,
+				29A0618A26182CA8009593AD /* UpdateTableViewCell.xib */,
 			);
 			path = "Plant Profile";
 			sourceTree = "<group>";
@@ -224,6 +248,9 @@
 				292DE40A25F5DDE70070A777 /* NewPlantInputPageViewModel.swift */,
 				292DE40D25F723DE0070A777 /* NewPlantInputViewModel.swift */,
 				292DE41025F726F70070A777 /* NewPlantInputViewModelForInput.swift */,
+				29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */,
+				29A0619126183053009593AD /* UpdateTableViewCellViewModel.swift */,
+				29A06194261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -293,10 +320,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29906A0B2618248100C8D188 /* UpdatesCollectionViewController.xib in Resources */,
 				2946C17425E329C300268123 /* LaunchScreen.storyboard in Resources */,
 				2946C18F25E3376900268123 /* PlantTableViewCell.xib in Resources */,
+				29906A062618246600C8D188 /* UpdatesTableViewController.xib in Resources */,
 				2946C17125E329C300268123 /* Assets.xcassets in Resources */,
 				292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */,
+				29A0618C26182CA8009593AD /* UpdateTableViewCell.xib in Resources */,
 				2946C16C25E329C100268123 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,17 +339,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */,
+				29906A0A2618248100C8D188 /* UpdatesCollectionViewController.swift in Sources */,
 				2931BAB225EC717D0016F841 /* PlantProfileViewModelForPlant.swift in Sources */,
 				292DE40B25F5DDE70070A777 /* NewPlantInputPageViewModel.swift in Sources */,
 				2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */,
 				29ED25592612D5EA0066CD5A /* Validator.swift in Sources */,
 				29ED25622612E7D50066CD5A /* UIButton+Ext.swift in Sources */,
+				29906A052618246600C8D188 /* UpdatesTableViewController.swift in Sources */,
 				2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */,
 				292DE40E25F723DE0070A777 /* NewPlantInputViewModel.swift in Sources */,
 				292DE41125F726F70070A777 /* NewPlantInputViewModelForInput.swift in Sources */,
 				2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */,
 				2946C19225E33A6D00268123 /* PlantTableViewCellViewModelFromPlant.swift in Sources */,
+				29A0618F26182EA0009593AD /* UpdatesTableViewViewModel.swift in Sources */,
 				2931BAAC25EB512A0016F841 /* PlantProfileViewController.swift in Sources */,
+				29A0619226183053009593AD /* UpdateTableViewCellViewModel.swift in Sources */,
 				29ED255F2612E0090066CD5A /* UIColor+ext.swift in Sources */,
 				2946C18325E32ACF00268123 /* Observable.swift in Sources */,
 				2946C19A25E345B600268123 /* HomeTableView.swift in Sources */,
@@ -328,11 +362,13 @@
 				2946C16F25E329C100268123 /* Garden_Journal_iOS.xcdatamodeld in Sources */,
 				292DE450260308540070A777 /* NewPlantInputPageViewController.swift in Sources */,
 				2946C16925E329C100268123 /* HomeViewController.swift in Sources */,
+				29A0618B26182CA8009593AD /* UpdateTableViewCell.swift in Sources */,
 				292DE44C260305FB0070A777 /* NewPlantInputViewController.swift in Sources */,
 				292DE41525F9D3900070A777 /* UITextField+Ext.swift in Sources */,
 				2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */,
 				2946C16525E329C100268123 /* AppDelegate.swift in Sources */,
 				2931BAA825EB50C60016F841 /* PlantProfileCoordinator.swift in Sources */,
+				29A06195261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift in Sources */,
 				2931BAAF25EC6AB00016F841 /* PlantProfileViewModel.swift in Sources */,
 				292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */,
 				292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */,

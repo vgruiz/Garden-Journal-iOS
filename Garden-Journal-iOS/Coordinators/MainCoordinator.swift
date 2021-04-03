@@ -32,6 +32,13 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         plantProfileCoordinator.start()
     }
     
+    func goToPlantProfile(forPlant plant: Plant ) {
+        let plantProfileCoordinator = PlantProfileCoordinator(plant: plant, navigationController: navigationController)
+        plantProfileCoordinator.parentCoordinator = self
+        childCoordinators.append(plantProfileCoordinator)
+        plantProfileCoordinator.start()
+    }
+    
     func addNewPlant() {
         let newPlantInputCoordinator = NewPlantInputPageViewCoordinator(navigationController: navigationController)
         newPlantInputCoordinator.parentCoordinator = self
