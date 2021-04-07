@@ -15,35 +15,45 @@ class UpdatesTableViewController: UITableViewController, Storyboarded {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    required init?(coder: NSCoder) {
-        //viewModel = UpdatesTableViewControllerViewModel
-        super.init(coder: coder)
+        guard let vm = viewModel else {
+            fatalError()
+        }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: UpdatesTableViewController.CELL_NIB_NAME, bundle: nil), forCellReuseIdentifier: UpdatesTableViewController.CELL_NIB_NAME)
         tableView.separatorStyle = .none
     }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return viewModel.updates.count
-        return 0
+        let n = viewModel.updatesList!.count
+        return n
+        //        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UpdatesTableViewController.CELL_NIB_NAME, for: indexPath) as! UpdateTableViewCell
         
-//        if let update = viewModel.updates?[indexPath.row].value {
-//            cell.noteLabel.text = update.note
-//        }
+        if let update = viewModel.updatesList?[indexPath.row].value {
+//            cell.noteLabel.text = "TEST TEST"
+            cell.viewModel = UpdateTableViewCellViewModelForUpdate(for: update)
+        }
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+        return 50
+    }
+    
 }

@@ -24,7 +24,7 @@ class PlantProfileViewModelForPlant: PlantProfileViewModel {
     // MARK: Init
 
     init(forPlantIndexPath indexPath: IndexPath) {
-        let plant = Observable(coreDataManager.fetchPlants()[indexPath.row])
+        let plant = Observable(DataBaseManager.fetchPlants()[indexPath.row])
         self.name = Observable(plant.value.name!)
         self.location = Observable(plant.value.location!)
         self.adoptionDate = Observable(plant.value.adoptionDate!)
@@ -32,6 +32,17 @@ class PlantProfileViewModelForPlant: PlantProfileViewModel {
         if let data = plant.value.profileImageData {
             self.profileImageData = Observable(data)
         }
+    }
+    
+    init(forPlant plant: Plant) {
+//        let plant = Observable(plant)
+        self.name = Observable(plant.name!)
+        self.location = Observable(plant.location!)
+        self.adoptionDate = Observable(plant.adoptionDate!)
+        if let data = plant.profileImageData {
+            self.profileImageData = Observable(data)
+        }
+        
     }
     
 }

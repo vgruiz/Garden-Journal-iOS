@@ -19,13 +19,15 @@ class HomeTableViewViewModel {
     
     // MARK: Init
     init() {
-        if coreDataManager.isPlantListEmpty() {
-            InMemoryObjects().loadDemoPlantList()
+//        if coreDataManager.isPlantListEmpty() {
+        if DataBaseManager.isPlantListEmpty() {
+            InMemoryObjects().loadDemoData()
         }
     }
     
     func getRefreshedPlantList() -> [Observable<Plant>] {
-        let plants = coreDataManager.fetchPlants()
+//        let plants = coreDataManager.fetchPlants()
+        let plants = DataBaseManager.fetchPlants()
         let observablePlantList = plants.compactMap { (plant) -> Observable<Plant>? in
             return Observable(plant)
         }

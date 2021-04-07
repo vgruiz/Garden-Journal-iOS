@@ -27,24 +27,36 @@ class PlantProfileCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = PlantProfileViewModelForPlant(forPlantIndexPath: plantIndexPath)
-        
-        // create the table view controller and collection view controller and provide them
-        // to plantProfileViewController
+//        let viewModel = PlantProfileViewModelForPlant(forPlantIndexPath: plantIndexPath)
+        guard let plant = plant else {
+            fatalError()
+        }
+        let viewModel = PlantProfileViewModelForPlant(forPlant: plant)
         
         let plantProfileViewController = PlantProfileViewController.instantiate()
-        plantProfileViewController.setChildViewControllers( children: createSubViewControllers() )
-        plantProfileViewController.plantIndexPath = plantIndexPath
+//        plantProfileViewController.plantIndexPath = plantIndexPath
         plantProfileViewController.coordinator = self
         navigationController.pushViewController(plantProfileViewController, animated: true)
+        plantProfileViewController.setUpdatesPageViewController( startUpdatesPageViewController() )
         plantProfileViewController.viewModel = viewModel
     }
     
-    func createSubViewControllers() -> [UIViewController] {
+    func startUpdatesPageViewController() -> UpdatesPageViewController {
+        // create table view controller
         let updatesTableViewController = UpdatesTableViewController.instantiate()
-        updatesTableViewController.viewModel = UpdatesTableViewViewModel(for: plant!)
         updatesTableViewController.coordinator = self
-        return [updatesTableViewController]
+        
+        //-----------------------------------
+        // create collection view controller
+
+        //-----------------------------------
+        
+        let updatesPageViewController = UpdatesPageViewController.instantiate()
+        updatesPageViewController.setChildViewControllers(tableViewController: updatesTableViewController, collectionViewController: UpdatesCollectionViewController())
+        updatesPageViewController.viewModel = UpdatesPageViewViewModel(forPlant: plant!)
+        updatesPageViewController.coordinator = self
+        
+        return updatesPageViewController
     }
     
 }

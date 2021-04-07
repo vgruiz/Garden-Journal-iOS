@@ -40,7 +40,6 @@
 		2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */; };
 		2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19F25E3672200268123 /* CoreDataManager.swift */; };
 		29906A052618246600C8D188 /* UpdatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A032618246600C8D188 /* UpdatesTableViewController.swift */; };
-		29906A062618246600C8D188 /* UpdatesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29906A042618246600C8D188 /* UpdatesTableViewController.xib */; };
 		29906A0A2618248100C8D188 /* UpdatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */; };
 		29906A0B2618248100C8D188 /* UpdatesCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */; };
 		29A0618B26182CA8009593AD /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0618926182CA8009593AD /* UpdateTableViewCell.swift */; };
@@ -48,6 +47,9 @@
 		29A0618F26182EA0009593AD /* UpdatesTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */; };
 		29A0619226183053009593AD /* UpdateTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0619126183053009593AD /* UpdateTableViewCellViewModel.swift */; };
 		29A06195261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A06194261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift */; };
+		29A0619826193FD7009593AD /* UpdatesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0619726193FD7009593AD /* UpdatesPageViewController.swift */; };
+		29A0619B261946B5009593AD /* UpdatesPageViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0619A261946B5009593AD /* UpdatesPageViewViewModel.swift */; };
+		29A061A5261AA31B009593AD /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A061A4261AA31B009593AD /* DataBaseManager.swift */; };
 		29ED25592612D5EA0066CD5A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED25582612D5EA0066CD5A /* Validator.swift */; };
 		29ED255F2612E0090066CD5A /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED255E2612E0090066CD5A /* UIColor+ext.swift */; };
 		29ED25622612E7D50066CD5A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED25612612E7D50066CD5A /* UIButton+Ext.swift */; };
@@ -90,7 +92,6 @@
 		2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewViewModel.swift; sourceTree = "<group>"; };
 		2946C19F25E3672200268123 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		29906A032618246600C8D188 /* UpdatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewController.swift; sourceTree = "<group>"; };
-		29906A042618246600C8D188 /* UpdatesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatesTableViewController.xib; sourceTree = "<group>"; };
 		29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesCollectionViewController.swift; sourceTree = "<group>"; };
 		29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatesCollectionViewController.xib; sourceTree = "<group>"; };
 		29A0618926182CA8009593AD /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +99,9 @@
 		29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewViewModel.swift; sourceTree = "<group>"; };
 		29A0619126183053009593AD /* UpdateTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		29A06194261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCellViewModelForUpdate.swift; sourceTree = "<group>"; };
+		29A0619726193FD7009593AD /* UpdatesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesPageViewController.swift; sourceTree = "<group>"; };
+		29A0619A261946B5009593AD /* UpdatesPageViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesPageViewViewModel.swift; sourceTree = "<group>"; };
+		29A061A4261AA31B009593AD /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		29ED25582612D5EA0066CD5A /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		29ED255E2612E0090066CD5A /* UIColor+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		29ED25612612E7D50066CD5A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
@@ -163,9 +167,9 @@
 				29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */,
 				29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */,
 				29906A032618246600C8D188 /* UpdatesTableViewController.swift */,
-				29906A042618246600C8D188 /* UpdatesTableViewController.xib */,
 				29A0618926182CA8009593AD /* UpdateTableViewCell.swift */,
 				29A0618A26182CA8009593AD /* UpdateTableViewCell.xib */,
+				29A0619726193FD7009593AD /* UpdatesPageViewController.swift */,
 			);
 			path = "Plant Profile";
 			sourceTree = "<group>";
@@ -232,6 +236,7 @@
 			children = (
 				2946C16D25E329C100268123 /* Garden_Journal_iOS.xcdatamodeld */,
 				2946C19F25E3672200268123 /* CoreDataManager.swift */,
+				29A061A4261AA31B009593AD /* DataBaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */,
 				29A0619126183053009593AD /* UpdateTableViewCellViewModel.swift */,
 				29A06194261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift */,
+				29A0619A261946B5009593AD /* UpdatesPageViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -323,7 +329,6 @@
 				29906A0B2618248100C8D188 /* UpdatesCollectionViewController.xib in Resources */,
 				2946C17425E329C300268123 /* LaunchScreen.storyboard in Resources */,
 				2946C18F25E3376900268123 /* PlantTableViewCell.xib in Resources */,
-				29906A062618246600C8D188 /* UpdatesTableViewController.xib in Resources */,
 				2946C17125E329C300268123 /* Assets.xcassets in Resources */,
 				292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */,
 				29A0618C26182CA8009593AD /* UpdateTableViewCell.xib in Resources */,
@@ -355,6 +360,7 @@
 				2931BAAC25EB512A0016F841 /* PlantProfileViewController.swift in Sources */,
 				29A0619226183053009593AD /* UpdateTableViewCellViewModel.swift in Sources */,
 				29ED255F2612E0090066CD5A /* UIColor+ext.swift in Sources */,
+				29A0619826193FD7009593AD /* UpdatesPageViewController.swift in Sources */,
 				2946C18325E32ACF00268123 /* Observable.swift in Sources */,
 				2946C19A25E345B600268123 /* HomeTableView.swift in Sources */,
 				2946C18E25E3376900268123 /* PlantTableViewCell.swift in Sources */,
@@ -362,12 +368,14 @@
 				2946C16F25E329C100268123 /* Garden_Journal_iOS.xcdatamodeld in Sources */,
 				292DE450260308540070A777 /* NewPlantInputPageViewController.swift in Sources */,
 				2946C16925E329C100268123 /* HomeViewController.swift in Sources */,
+				29A061A5261AA31B009593AD /* DataBaseManager.swift in Sources */,
 				29A0618B26182CA8009593AD /* UpdateTableViewCell.swift in Sources */,
 				292DE44C260305FB0070A777 /* NewPlantInputViewController.swift in Sources */,
 				292DE41525F9D3900070A777 /* UITextField+Ext.swift in Sources */,
 				2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */,
 				2946C16525E329C100268123 /* AppDelegate.swift in Sources */,
 				2931BAA825EB50C60016F841 /* PlantProfileCoordinator.swift in Sources */,
+				29A0619B261946B5009593AD /* UpdatesPageViewViewModel.swift in Sources */,
 				29A06195261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift in Sources */,
 				2931BAAF25EC6AB00016F841 /* PlantProfileViewModel.swift in Sources */,
 				292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */,

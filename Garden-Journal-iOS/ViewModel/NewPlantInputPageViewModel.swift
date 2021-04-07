@@ -25,7 +25,8 @@ class NewPlantInputPageViewModel {
                                    locationsList: nil )
         
         //get locations from core data
-        let plants = coreDataManager.fetchPlants()
+//        let plants = coreDataManager.fetchPlants()
+        let plants = DataBaseManager.fetchPlants()
         let locations = Set( plants.compactMap { $0.location } )
         
         let input2 = NewPlantInput(inputType: .Location,
@@ -44,7 +45,7 @@ class NewPlantInputPageViewModel {
     }
     
     func savePlant(name: String, adoptionDate: Date, location: String, imageData: Data?, pinnedNotes: String?) -> Int {
-        return coreDataManager.savePlant(name: name, adoptionDate: adoptionDate, location: location, imageData: imageData, pinnedNotes: pinnedNotes)
+        return DataBaseManager.savePlant(name: name, adoptionDate: adoptionDate, location: location, imageData: imageData, pinnedNotes: pinnedNotes)
     }
     
 }
