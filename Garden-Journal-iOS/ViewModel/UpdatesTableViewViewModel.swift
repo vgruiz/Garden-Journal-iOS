@@ -27,7 +27,13 @@ class UpdatesTableViewViewModel {
 //            InMemoryObjects().loadDemoUpdatesList(for: plant)
 //        }
     }
-    
+
+    init(forUpdates updates: [Update] ) {
+        updatesList = updates.compactMap({ (update) -> Observable<Update>? in
+            return Observable(update)
+        })
+    }
+
 //    func getRefreshedUpdateList() -> [Observable<Update>] {
 //        let updates = coreDataManager.fetchUpdates(for: self.plant)
 //        let observableUpdateList = updates.compactMap { (update) -> Observable<Update>? in

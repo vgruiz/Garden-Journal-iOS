@@ -14,7 +14,6 @@ class UpdatesPageViewViewModel {
     private let plant: Plant
     var updatesList: [Observable<Update>]? {
         get {
-//            let updates = coreDataManager.fetchUpdates(for: self.plant)
             let updates = DataBaseManager.fetchUpdates(for: self.plant)
             let observableUpdateList = updates.compactMap { (update) -> Observable<Update>? in
                 return Observable(update)

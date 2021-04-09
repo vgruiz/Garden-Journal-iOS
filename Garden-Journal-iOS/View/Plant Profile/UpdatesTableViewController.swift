@@ -15,9 +15,6 @@ class UpdatesTableViewController: UITableViewController, Storyboarded {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let vm = viewModel else {
-            fatalError()
-        }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: UpdatesTableViewController.CELL_NIB_NAME, bundle: nil), forCellReuseIdentifier: UpdatesTableViewController.CELL_NIB_NAME)
@@ -35,16 +32,13 @@ class UpdatesTableViewController: UITableViewController, Storyboarded {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let n = viewModel.updatesList!.count
-        return n
-        //        return 0
+        return viewModel.updatesList!.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UpdatesTableViewController.CELL_NIB_NAME, for: indexPath) as! UpdateTableViewCell
         
         if let update = viewModel.updatesList?[indexPath.row].value {
-//            cell.noteLabel.text = "TEST TEST"
             cell.viewModel = UpdateTableViewCellViewModelForUpdate(for: update)
         }
 

@@ -15,15 +15,14 @@ class UpdatesPageViewController: UIPageViewController, Storyboarded {
             fillUI()
         }
     }
-    private(set) var updatesTableViewController: UpdatesTableViewController?
-    private(set) var updatesCollectionViewController: UpdatesCollectionViewController?
+    private(set) var orderedViewControllers: [UIViewController]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
         delegate = self
         
-        if let firstViewController = updatesTableViewController {
+        if let firstViewController = orderedViewControllers?.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
     }
@@ -33,30 +32,59 @@ class UpdatesPageViewController: UIPageViewController, Storyboarded {
             fatalError("Fatal error getting list of updates.")
         }
         
-        updatesTableViewController?.viewModel = UpdatesTableViewViewModel(forUpdates: updatesList)
-//        updatesCollectionViewController.viewModel = UpdatesCollectionViewViewModel(forUpdates: updatesList)
-        
-        if let firstViewController = updatesTableViewController {
+        if let firstViewController = orderedViewControllers?.first {
             setViewControllers([firstViewController], direction: .forward, animated: false, completion: nil)
         }
-        
-        updatesTableViewController?.tableView.reloadData()
+
+        for var vc in orderedViewControllers as! [UpdatesPageSubView] {
+            vc.viewModel = UpdatesTableViewViewModel(forUpdates: updatesList)
+            vc.reload()
+        }
     }
     
     func setChildViewControllers(tableViewController: UpdatesTableViewController, collectionViewController: UpdatesCollectionViewController) {
-        updatesTableViewController = tableViewController
-        updatesCollectionViewController = collectionViewController
+//        orderedViewControllers?.append(tableViewController)
+//        orderedViewControllers?.append(collectionViewController)
+        orderedViewControllers?.append(contentsOf: [tableViewController, collectionViewController])
     }
 
 }
 
 extension UpdatesPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        return nil
+        guard let viewControllerIndex = orderedViewControllers?.firstIndex(of: viewController), let count = orderedViewControllers?.count else {
+            return nil
+        }
+        
+        let previousIndex = viewControllerIndex - 1
+        
+        guard previousIndex >= 0 else {
+            return nil
+        }
+        
+        guard count > previousIndex else {
+            return nil
+        }
+        
+        return orderedViewControllers?[previousIndex]
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        return nil
+        guard let viewControllerIndex = orderedViewControllers?.firstIndex(of: viewController), let count = orderedViewControllers?.count else {
+            return nil
+        }
+        
+        let nextIndex = viewControllerIndex + 1
+        
+        guard count != nextIndex else {
+            return nil
+        }
+        
+        guard count > nextIndex else {
+            return nil
+        }
+        
+        return orderedViewControllers?[nextIndex]
     }
 }
 

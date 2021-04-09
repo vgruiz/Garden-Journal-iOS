@@ -39,9 +39,11 @@
 		2946C19A25E345B600268123 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19925E345B600268123 /* HomeTableView.swift */; };
 		2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */; };
 		2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19F25E3672200268123 /* CoreDataManager.swift */; };
+		295BFF1E261EBD76000B99DD /* UpdateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295BFF1C261EBD76000B99DD /* UpdateCollectionViewCell.swift */; };
+		295BFF1F261EBD76000B99DD /* UpdateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295BFF1D261EBD76000B99DD /* UpdateCollectionViewCell.xib */; };
+		2987B28E262009BB0030550E /* UpdatesPageSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2987B28D262009BB0030550E /* UpdatesPageSubView.swift */; };
 		29906A052618246600C8D188 /* UpdatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A032618246600C8D188 /* UpdatesTableViewController.swift */; };
 		29906A0A2618248100C8D188 /* UpdatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */; };
-		29906A0B2618248100C8D188 /* UpdatesCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */; };
 		29A0618B26182CA8009593AD /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0618926182CA8009593AD /* UpdateTableViewCell.swift */; };
 		29A0618C26182CA8009593AD /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29A0618A26182CA8009593AD /* UpdateTableViewCell.xib */; };
 		29A0618F26182EA0009593AD /* UpdatesTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */; };
@@ -91,9 +93,11 @@
 		2946C19925E345B600268123 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		2946C19C25E3465A00268123 /* HomeTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewViewModel.swift; sourceTree = "<group>"; };
 		2946C19F25E3672200268123 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		295BFF1C261EBD76000B99DD /* UpdateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCollectionViewCell.swift; sourceTree = "<group>"; };
+		295BFF1D261EBD76000B99DD /* UpdateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCollectionViewCell.xib; sourceTree = "<group>"; };
+		2987B28D262009BB0030550E /* UpdatesPageSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesPageSubView.swift; sourceTree = "<group>"; };
 		29906A032618246600C8D188 /* UpdatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewController.swift; sourceTree = "<group>"; };
 		29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesCollectionViewController.swift; sourceTree = "<group>"; };
-		29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatesCollectionViewController.xib; sourceTree = "<group>"; };
 		29A0618926182CA8009593AD /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
 		29A0618A26182CA8009593AD /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
 		29A0618E26182EA0009593AD /* UpdatesTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewViewModel.swift; sourceTree = "<group>"; };
@@ -165,11 +169,13 @@
 			children = (
 				2931BAAB25EB512A0016F841 /* PlantProfileViewController.swift */,
 				29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */,
-				29906A092618248100C8D188 /* UpdatesCollectionViewController.xib */,
 				29906A032618246600C8D188 /* UpdatesTableViewController.swift */,
 				29A0618926182CA8009593AD /* UpdateTableViewCell.swift */,
 				29A0618A26182CA8009593AD /* UpdateTableViewCell.xib */,
 				29A0619726193FD7009593AD /* UpdatesPageViewController.swift */,
+				295BFF1C261EBD76000B99DD /* UpdateCollectionViewCell.swift */,
+				295BFF1D261EBD76000B99DD /* UpdateCollectionViewCell.xib */,
+				2987B28D262009BB0030550E /* UpdatesPageSubView.swift */,
 			);
 			path = "Plant Profile";
 			sourceTree = "<group>";
@@ -326,13 +332,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29906A0B2618248100C8D188 /* UpdatesCollectionViewController.xib in Resources */,
 				2946C17425E329C300268123 /* LaunchScreen.storyboard in Resources */,
 				2946C18F25E3376900268123 /* PlantTableViewCell.xib in Resources */,
 				2946C17125E329C300268123 /* Assets.xcassets in Resources */,
 				292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */,
 				29A0618C26182CA8009593AD /* UpdateTableViewCell.xib in Resources */,
 				2946C16C25E329C100268123 /* Main.storyboard in Resources */,
+				295BFF1F261EBD76000B99DD /* UpdateCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */,
+				2987B28E262009BB0030550E /* UpdatesPageSubView.swift in Sources */,
 				29906A0A2618248100C8D188 /* UpdatesCollectionViewController.swift in Sources */,
 				2931BAB225EC717D0016F841 /* PlantProfileViewModelForPlant.swift in Sources */,
+				295BFF1E261EBD76000B99DD /* UpdateCollectionViewCell.swift in Sources */,
 				292DE40B25F5DDE70070A777 /* NewPlantInputPageViewModel.swift in Sources */,
 				2946C19D25E3465A00268123 /* HomeTableViewViewModel.swift in Sources */,
 				29ED25592612D5EA0066CD5A /* Validator.swift in Sources */,

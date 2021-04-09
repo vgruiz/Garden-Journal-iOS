@@ -42,19 +42,30 @@ class PlantProfileCoordinator: Coordinator {
     }
     
     func startUpdatesPageViewController() -> UpdatesPageViewController {
+        let updatesPageViewController = UpdatesPageViewController.instantiate()
+        updatesPageViewController.coordinator = self
+        updatesPageViewController.viewModel = UpdatesPageViewViewModel(forPlant: plant!)
+
+        guard let updatesList = updatesPageViewController.viewModel?.updatesList else {
+            fatalError()
+        }
         // create table view controller
         let updatesTableViewController = UpdatesTableViewController.instantiate()
         updatesTableViewController.coordinator = self
+        updatesTableViewController.viewModel = UpdatesTableViewViewModel(forUpdates: updatesList)
         
         //-----------------------------------
         // create collection view controller
+        let updatesCollectionViewController = UpdatesCollectionViewController.instantiate()
+        updatesCollectionViewController.coordinator = self
+        updatesCollectionViewController.viewModel = UpdatesTableViewViewModel(forUpdates: updatesList)
 
         //-----------------------------------
-        
-        let updatesPageViewController = UpdatesPageViewController.instantiate()
-        updatesPageViewController.setChildViewControllers(tableViewController: updatesTableViewController, collectionViewController: UpdatesCollectionViewController())
-        updatesPageViewController.viewModel = UpdatesPageViewViewModel(forPlant: plant!)
-        updatesPageViewController.coordinator = self
+
+        updatesPageViewController.setChildViewControllers(
+            tableViewController: updatesTableViewController,
+            collectionViewController: updatesCollectionViewController
+        )
         
         return updatesPageViewController
     }
