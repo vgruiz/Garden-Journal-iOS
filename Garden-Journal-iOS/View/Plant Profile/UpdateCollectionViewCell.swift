@@ -15,11 +15,17 @@ class UpdateCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    let cornerRadius: CGFloat = 8.0
+    
     @IBOutlet var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func layoutSubviews() {
+        imageView.layer.cornerRadius = cornerRadius
     }
     
     private func fillUI() {

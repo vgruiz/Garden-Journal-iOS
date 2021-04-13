@@ -89,9 +89,9 @@ class NewPlantInputPageViewController: UIPageViewController, UIPageViewControlle
         
         let _data = pages[3].imageView.image?.pngData() ?? nil
         
-        if let index = viewModel?.savePlant(name: _name, adoptionDate: _date, location: _location, imageData: _data, pinnedNotes: nil) {
+        if let plant = viewModel?.createNewPlant(name: _name, adoptionDate: _date, location: _location, imageData: _data, pinnedNotes: nil) {
 
-            coordinator?.finishAddingPlant(index: index)
+            coordinator?.finishAddingPlant(plant)
             
         }
         

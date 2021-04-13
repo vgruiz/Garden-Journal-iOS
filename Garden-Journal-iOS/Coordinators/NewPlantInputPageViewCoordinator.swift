@@ -52,9 +52,13 @@ class NewPlantInputPageViewCoordinator: Coordinator {
         newPlantInputPageViewController?.createNewPlant()
     }
     
-    func finishAddingPlant(index: Int) {
-        parentCoordinator?.refreshAndGoToNewProfile( index: index ) // or something like that
+//    func finishAddingPlant(index: Int) {
+//        parentCoordinator?.refreshAndGoToNewProfile( index: index ) // or something like that
+//        parentCoordinator?.childDidFinish(self)
+//    }
+
+    func finishAddingPlant(_ plant: Plant) {
+        parentCoordinator?.refreshAndGoToNewProfile(forPlant: plant) // or something like that
         parentCoordinator?.childDidFinish(self)
     }
-    
 }

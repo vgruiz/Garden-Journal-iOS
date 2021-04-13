@@ -161,5 +161,19 @@ class DataBaseManager: NSObject {
         work1.workPerformed = false
         return [work0, work1]
     }
+    
+    class func updatePlantProperty(forPlant plant: Plant, _ value: Any?, forKey key: String ) {
+        plant.setValue(value, forKey: key)
+        save(withErrorMessage: "Error updating plant property in core data")
+    }
+    
+    private class func save(withErrorMessage message: String = "Error saving in core data") {
+        do {
+            //try moc.save()
+            try CoreDataManager.moc.save()
+        } catch {
+            print( "\(message): \(error)")
+        }
+    }
 
 }

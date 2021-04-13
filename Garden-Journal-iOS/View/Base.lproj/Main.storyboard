@@ -65,30 +65,26 @@
             <objects>
                 <viewController storyboardIdentifier="PlantProfileViewController" id="6rk-Q7-3Ll" customClass="PlantProfileViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAq-6r-AuZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJe-Ht-LRy">
-                                <rect key="frame" x="0.0" y="44" width="414" height="242"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="These are pinned notes about this plant, probably about its care." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cID-tF-WFn">
-                                <rect key="frame" x="154" y="302" width="240" height="58"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="QcG-0g-9l4"/>
-                                </constraints>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" scrollEnabled="NO" text="pinned notes" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cID-tF-WFn">
+                                <rect key="frame" x="154" y="230" width="240" height="28"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hw9-pJ-6Iu">
-                                <rect key="frame" x="0.0" y="419" width="414" height="443"/>
+                                <rect key="frame" x="0.0" y="351" width="414" height="423"/>
                                 <connections>
                                     <segue destination="DhC-xS-ggE" kind="embed" id="g15-Ta-ZnA"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mr3-PA-KcW">
-                                <rect key="frame" x="20" y="302" width="119" height="29"/>
+                                <rect key="frame" x="20" y="234" width="119" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,10 +98,10 @@
                             <constraint firstItem="YJe-Ht-LRy" firstAttribute="top" secondItem="aK4-ei-mDT" secondAttribute="top" id="DwY-ns-mrT"/>
                             <constraint firstItem="mr3-PA-KcW" firstAttribute="leading" secondItem="bAq-6r-AuZ" secondAttribute="leading" constant="20" symbolic="YES" id="Fd9-he-M7J"/>
                             <constraint firstItem="hw9-pJ-6Iu" firstAttribute="top" secondItem="YJe-Ht-LRy" secondAttribute="bottom" constant="133" id="H4C-bh-BqW"/>
+                            <constraint firstItem="cID-tF-WFn" firstAttribute="top" secondItem="mr3-PA-KcW" secondAttribute="top" constant="-4" id="Hxk-gd-yj0"/>
                             <constraint firstItem="hw9-pJ-6Iu" firstAttribute="leading" secondItem="aK4-ei-mDT" secondAttribute="leading" id="PiC-Rk-6DC"/>
-                            <constraint firstItem="cID-tF-WFn" firstAttribute="height" secondItem="mr3-PA-KcW" secondAttribute="height" multiplier="2" id="Ued-Wr-NLV"/>
+                            <constraint firstItem="mr3-PA-KcW" firstAttribute="width" relation="lessThanOrEqual" secondItem="bAq-6r-AuZ" secondAttribute="width" multiplier="0.5" id="QG1-X8-jd1"/>
                             <constraint firstItem="mr3-PA-KcW" firstAttribute="top" secondItem="YJe-Ht-LRy" secondAttribute="bottom" constant="16" id="Zwt-v4-6Ko"/>
-                            <constraint firstItem="cID-tF-WFn" firstAttribute="top" secondItem="YJe-Ht-LRy" secondAttribute="bottom" constant="16" id="epR-1M-ltL"/>
                             <constraint firstItem="cID-tF-WFn" firstAttribute="leading" secondItem="mr3-PA-KcW" secondAttribute="trailing" constant="15" id="lLD-Q9-V3g"/>
                             <constraint firstAttribute="trailing" secondItem="YJe-Ht-LRy" secondAttribute="trailing" id="nNt-UP-woy"/>
                             <constraint firstItem="YJe-Ht-LRy" firstAttribute="leading" secondItem="bAq-6r-AuZ" secondAttribute="leading" id="qpb-HB-vhb"/>
@@ -113,6 +109,7 @@
                             <constraint firstItem="YJe-Ht-LRy" firstAttribute="height" secondItem="bAq-6r-AuZ" secondAttribute="height" multiplier="0.27" id="yvd-EO-41y"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="containerView" destination="hw9-pJ-6Iu" id="Zjv-Eh-4Bg"/>
                         <outlet property="nameLabel" destination="mr3-PA-KcW" id="kFH-a6-Hp6"/>
@@ -127,7 +124,7 @@
         <!--Updates Page View Controller-->
         <scene sceneID="deO-8S-Z5T">
             <objects>
-                <pageViewController storyboardIdentifier="UpdatesPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="DhC-xS-ggE" customClass="UpdatesPageViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="UpdatesPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DhC-xS-ggE" customClass="UpdatesPageViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3In-WM-hVO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2323" y="258"/>
@@ -162,12 +159,12 @@
         <!--Updates Collection View Controller-->
         <scene sceneID="Jpg-tR-Z4l">
             <objects>
-                <collectionViewController storyboardIdentifier="UpdatesCollectionViewController" id="Wpm-FP-oDT" customClass="UpdatesCollectionViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="UpdatesCollectionViewController" automaticallyAdjustsScrollViewInsets="NO" id="Wpm-FP-oDT" customClass="UpdatesCollectionViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Z5a-XH-cpQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="443"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zNK-1K-t2K">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yZU-pU-7sV">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -188,12 +185,13 @@
                             <outlet property="delegate" destination="Wpm-FP-oDT" id="r59-JY-mcy"/>
                         </connections>
                     </collectionView>
+                    <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="443"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="So0-X3-6KF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3094" y="-93"/>
+            <point key="canvasLocation" x="3796" y="257"/>
         </scene>
     </scenes>
     <resources>

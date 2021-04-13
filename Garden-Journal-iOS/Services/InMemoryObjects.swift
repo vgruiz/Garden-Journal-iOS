@@ -13,47 +13,47 @@ class InMemoryObjects {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private let coreDataManager = CoreDataManager()
-  
-    func loadDemoPlantList() {
-        _ = DataBaseManager.savePlant(name: "Planty",
-                                  adoptionDate: Date(),
-                                  location: "Bedroom",
-                                  imageData: UIImage(named: "bonsai0")?.jpegData(compressionQuality: 1.0),
-                                  pinnedNotes: nil)
-        
-        _ = DataBaseManager.savePlant(name: "Planteen",
-                                  adoptionDate: Date(),
-                                  location: "Backyard",
-                                  imageData: UIImage(named: "bonsai1")?.jpegData(compressionQuality: 1.0),
-                                  pinnedNotes: nil)
-        
-        _ = DataBaseManager.savePlant(name: "Plantoo",
-                                  adoptionDate: Date(),
-                                  location: "Office",
-                                  imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
-                                  pinnedNotes: nil)
-    }
+//  
+//    func loadDemoPlantList() {
+//        _ = DataBaseManager.savePlant(name: "Planty",
+//                                  adoptionDate: Date(),
+//                                  location: "Bedroom",
+//                                  imageData: UIImage(named: "bonsai0")?.jpegData(compressionQuality: 1.0),
+//                                  pinnedNotes: "These are pinned notes")
+//        
+//        _ = DataBaseManager.savePlant(name: "Planteen",
+//                                  adoptionDate: Date(),
+//                                  location: "Backyard",
+//                                  imageData: UIImage(named: "bonsai1")?.jpegData(compressionQuality: 1.0),
+//                                  pinnedNotes: "These are pinned notes")
+//        
+//        _ = DataBaseManager.savePlant(name: "Plantoo",
+//                                  adoptionDate: Date(),
+//                                  location: "Office",
+//                                  imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
+//                                  pinnedNotes: "These are pinned notes")
+//    }
     
     func loadDemoData() {
         let plant0 = DataBaseManager.createNewPlant(name: "Planty",
                                   adoptionDate: Date(),
                                   location: "Bedroom",
                                   imageData: UIImage(named: "bonsai0")?.jpegData(compressionQuality: 1.0),
-                                  pinnedNotes: nil)
+                                  pinnedNotes: "These are pinned notes")
         loadDemoUpdatesList(for: plant0)
         
         let plant1 = DataBaseManager.createNewPlant(name: "Planteen",
                                   adoptionDate: Date(),
                                   location: "Backyard",
                                   imageData: UIImage(named: "bonsai1")?.jpegData(compressionQuality: 1.0),
-                                  pinnedNotes: nil)
+                                  pinnedNotes: "These are pinned notes")
         loadDemoUpdatesList(for: plant1)
         
         let plant2 = DataBaseManager.createNewPlant(name: "Plantoo",
                                   adoptionDate: Date(),
                                   location: "Office",
                                   imageData: UIImage(named: "monstera")?.jpegData(compressionQuality: 1.0),
-                                  pinnedNotes: nil)
+                                  pinnedNotes: "These are pinned notes")
         loadDemoUpdatesList(for: plant2)
     }
     

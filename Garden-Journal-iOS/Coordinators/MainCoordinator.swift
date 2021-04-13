@@ -56,10 +56,10 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         }
     }
     
-    func refreshAndGoToNewProfile(index: Int) {
+    func refreshAndGoToNewProfile(forPlant plant: Plant ) {
         navigationController.dismiss(animated: true) {
             self.homeViewController.refreshTableView()
         }
-        self.goToPlantProfile(forPlantIndexPath: IndexPath(item: index, section: 0))
+        self.goToPlantProfile(forPlant: plant)
     }
 }

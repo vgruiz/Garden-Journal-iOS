@@ -46,8 +46,8 @@ class UpdatesTableViewController: UITableViewController, Storyboarded {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-        return 50
+        return UITableView.automaticDimension
+//        return 50
     }
     
 }

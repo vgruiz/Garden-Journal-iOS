@@ -12,7 +12,7 @@ class PlantProfileCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    var plantIndexPath: IndexPath
+    var plantIndexPath: IndexPath?
     var plant: Plant?
     
     init(plantIndexPath: IndexPath, navigationController: UINavigationController) {
@@ -27,18 +27,23 @@ class PlantProfileCoordinator: Coordinator {
     }
     
     func start() {
-//        let viewModel = PlantProfileViewModelForPlant(forPlantIndexPath: plantIndexPath)
-        guard let plant = plant else {
-            fatalError()
-        }
-        let viewModel = PlantProfileViewModelForPlant(forPlant: plant)
-        
+//        guard let plant = plant else {
+//            fatalError()
+//        }
+        var viewModel: PlantProfileViewModelForPlant?
         let plantProfileViewController = PlantProfileViewController.instantiate()
-//        plantProfileViewController.plantIndexPath = plantIndexPath
+        
+        if let plant = plant {
+            viewModel = PlantProfileViewModelForPlant(forPlant: plant)
+        } else if let indexPath = plantIndexPath {
+            viewModel = PlantProfileViewModelForPlant(forPlantIndexPath: indexPath)
+            plantProfileViewController.plantIndexPath = indexPath
+        }
+        plantProfileViewController.viewModel = viewModel
+        
         plantProfileViewController.coordinator = self
         navigationController.pushViewController(plantProfileViewController, animated: true)
         plantProfileViewController.setUpdatesPageViewController( startUpdatesPageViewController() )
-        plantProfileViewController.viewModel = viewModel
     }
     
     func startUpdatesPageViewController() -> UpdatesPageViewController {
@@ -69,5 +74,7 @@ class PlantProfileCoordinator: Coordinator {
         
         return updatesPageViewController
     }
+    
+    
     
 }

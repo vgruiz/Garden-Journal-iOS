@@ -11,21 +11,10 @@ import CoreData
 class UpdatesTableViewViewModel {
     
     private let coreDataManager = CoreDataManager()
-//    private let plant: Plant
     var updatesList: [Observable<Update>]?
-//    {
-//        get {
-//            return getRefreshedUpdateList()
-//        }
-//    }
-    
     // MARK: Init
     init(forUpdates updates: [Observable<Update>] ) {
         updatesList = updates
-//        self.plant = plant
-//        if coreDataManager.isUpdateListEmpty(for: plant) {
-//            InMemoryObjects().loadDemoUpdatesList(for: plant)
-//        }
     }
 
     init(forUpdates updates: [Update] ) {
@@ -33,12 +22,4 @@ class UpdatesTableViewViewModel {
             return Observable(update)
         })
     }
-
-//    func getRefreshedUpdateList() -> [Observable<Update>] {
-//        let updates = coreDataManager.fetchUpdates(for: self.plant)
-//        let observableUpdateList = updates.compactMap { (update) -> Observable<Update>? in
-//            return Observable(update)
-//        }
-//        return observableUpdateList
-//    }
 }

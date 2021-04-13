@@ -19,8 +19,7 @@ class PlantProfileViewController: UIViewController, Storyboarded {
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var pinnedNotesTextView: UITextView!
     @IBOutlet var containerView: UIView!
-    
-    
+
     var viewModel: PlantProfileViewModelForPlant? {
         didSet {
             fillUI()
@@ -30,6 +29,21 @@ class PlantProfileViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillUI()
+        pinnedNotesTextView.delegate = self
+        pinnedNotesTextView.textColor = MyColor.lightTextGray
+        pinnedNotesTextView.sizeToFit()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+           //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+           //tap.cancelsTouchesInView = false
+
+           view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     fileprivate func fillUI() {
@@ -60,6 +74,9 @@ class PlantProfileViewController: UIViewController, Storyboarded {
             self.nameLabel.text = $0
         }
         
+        viewModel.pinnedNotes?.bindAndFire{ [unowned self] in
+            self.pinnedNotesTextView.text = $0
+        }
         
 //        viewModel.location.bindAndFire{ [unowned self] in
 //            self.locationLabel.text = $0
@@ -77,4 +94,20 @@ class PlantProfileViewController: UIViewController, Storyboarded {
     func setUpdatesPageViewController(_ vc: UpdatesPageViewController) {
         updatesPageViewController = vc
     }
+    
+    @IBAction func editPinnedNotesButtonPressed(_ sender: Any) {
+        
+    }
+}
+
+extension PlantProfileViewController: UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        // if different, ask user are you sure you want to change their pinned notes?
+        viewModel?.savePinnedNotes(newPinnedNotes: textView.text)
+        print("Use view model to save the text")
+    }
+    
+//    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+//        // maybe confirm with the user that they do actually want to edit the pinned notes
+//    }
 }

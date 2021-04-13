@@ -44,8 +44,8 @@ class NewPlantInputPageViewModel {
         inputList.append(input3)
     }
     
-    func savePlant(name: String, adoptionDate: Date, location: String, imageData: Data?, pinnedNotes: String?) -> Int {
-        return DataBaseManager.savePlant(name: name, adoptionDate: adoptionDate, location: location, imageData: imageData, pinnedNotes: pinnedNotes)
+    func createNewPlant(name: String, adoptionDate: Date, location: String, imageData: Data?, pinnedNotes: String?) -> Plant {
+        return DataBaseManager.createNewPlant(name: name, adoptionDate: adoptionDate, location: location, imageData: imageData, pinnedNotes: pinnedNotes)
     }
     
 }

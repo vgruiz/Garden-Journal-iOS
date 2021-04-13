@@ -29,6 +29,7 @@ final class MyColor {
     static let sharedMyColor = MyColor()
     var sharedInstanceExists = false
     static let disabledGray = UIColor.lightGray
+    static let lightTextGray = UIColor.systemGray
     
     var activeColorSceheme: ColorScheme {
         get {

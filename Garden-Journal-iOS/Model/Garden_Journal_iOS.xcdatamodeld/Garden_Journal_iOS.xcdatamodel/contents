@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Plant" representedClassName="Plant" syncable="YES" codeGenerationType="class">
         <attribute name="adoptionDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="location" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="pinnedNotes" optional="YES" attributeType="String"/>
         <attribute name="profileImageData" optional="YES" attributeType="Binary"/>
-        <relationship name="updates" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Update" inverseName="parentPlant" inverseEntity="Update"/>
+        <relationship name="updates" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Update" inverseName="parentPlant" inverseEntity="Update"/>
     </entity>
     <entity name="PlantWork" representedClassName="PlantWork" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String"/>
         <attribute name="workPerformed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <relationship name="parentUpdate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Update" inverseName="plantWork" inverseEntity="Update"/>
+        <relationship name="parentUpdate" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Update" inverseName="plantWork" inverseEntity="Update"/>
     </entity>
     <entity name="Update" representedClassName="Update" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="imageData" optional="YES" attributeType="Binary"/>
         <attribute name="note" optional="YES" attributeType="String"/>
-        <relationship name="parentPlant" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="updates" inverseEntity="Plant"/>
-        <relationship name="plantWork" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlantWork" inverseName="parentUpdate" inverseEntity="PlantWork"/>
+        <relationship name="parentPlant" maxCount="1" deletionRule="No Action" destinationEntity="Plant" inverseName="updates" inverseEntity="Plant"/>
+        <relationship name="plantWork" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PlantWork" inverseName="parentUpdate" inverseEntity="PlantWork"/>
     </entity>
     <elements>
         <element name="Plant" positionX="-63" positionY="-18" width="128" height="119"/>
-        <element name="PlantWork" positionX="389.62451171875" positionY="347.667236328125" width="128" height="73"/>
-        <element name="Update" positionX="208.197265625" positionY="142.2129516601562" width="128" height="118"/>
+        <element name="PlantWork" positionX="389.62451171875" positionY="347.667236328125" width="128" height="74"/>
+        <element name="Update" positionX="208.197265625" positionY="142.2129516601562" width="128" height="104"/>
     </elements>
 </model>
