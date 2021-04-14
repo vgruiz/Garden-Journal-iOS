@@ -9,17 +9,17 @@ import UIKit
 
 class PlantProfileViewController: UIViewController, Storyboarded {
 
-    weak var coordinator: Coordinator?
+    weak var coordinator: PlantProfileCoordinator?
     var plantIndexPath: IndexPath?
     
-//    var pageViewViewControllers = [UIViewController]()
     var updatesPageViewController: UpdatesPageViewController?
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var pinnedNotesTextView: UITextView!
     @IBOutlet var containerView: UIView!
-
+    @IBOutlet var addNewUpdateButton: UIButton!
+    
     var viewModel: PlantProfileViewModelForPlant? {
         didSet {
             fillUI()
@@ -33,12 +33,10 @@ class PlantProfileViewController: UIViewController, Storyboarded {
         pinnedNotesTextView.textColor = MyColor.lightTextGray
         pinnedNotesTextView.sizeToFit()
         
+        addNewUpdateButton.tintColor = MyColor.sharedMyColor.activeColorSceheme.color2
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-
-           //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-           //tap.cancelsTouchesInView = false
-
-           view.addGestureRecognizer(tap)
+        view.addGestureRecognizer(tap)
     }
     
     //Calls this function when the tap is recognized.
@@ -95,8 +93,8 @@ class PlantProfileViewController: UIViewController, Storyboarded {
         updatesPageViewController = vc
     }
     
-    @IBAction func editPinnedNotesButtonPressed(_ sender: Any) {
-        
+    @IBAction func addNewUpdateButtonPressed(_ sender: Any) {
+        coordinator?.addNewUpdate()
     }
 }
 

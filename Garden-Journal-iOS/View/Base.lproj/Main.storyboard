@@ -89,6 +89,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8V-Ie-Thb">
+                                <rect key="frame" x="368" y="321" width="18" height="22"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addNewUpdateButtonPressed:" destination="6rk-Q7-3Ll" eventType="touchUpInside" id="rKG-2O-zhX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aK4-ei-mDT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -102,15 +109,18 @@
                             <constraint firstItem="hw9-pJ-6Iu" firstAttribute="leading" secondItem="aK4-ei-mDT" secondAttribute="leading" id="PiC-Rk-6DC"/>
                             <constraint firstItem="mr3-PA-KcW" firstAttribute="width" relation="lessThanOrEqual" secondItem="bAq-6r-AuZ" secondAttribute="width" multiplier="0.5" id="QG1-X8-jd1"/>
                             <constraint firstItem="mr3-PA-KcW" firstAttribute="top" secondItem="YJe-Ht-LRy" secondAttribute="bottom" constant="16" id="Zwt-v4-6Ko"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I8V-Ie-Thb" secondAttribute="trailing" constant="8" id="gpt-QF-C92"/>
                             <constraint firstItem="cID-tF-WFn" firstAttribute="leading" secondItem="mr3-PA-KcW" secondAttribute="trailing" constant="15" id="lLD-Q9-V3g"/>
                             <constraint firstAttribute="trailing" secondItem="YJe-Ht-LRy" secondAttribute="trailing" id="nNt-UP-woy"/>
                             <constraint firstItem="YJe-Ht-LRy" firstAttribute="leading" secondItem="bAq-6r-AuZ" secondAttribute="leading" id="qpb-HB-vhb"/>
+                            <constraint firstItem="hw9-pJ-6Iu" firstAttribute="top" secondItem="I8V-Ie-Thb" secondAttribute="bottom" constant="8" id="vIc-ag-wyF"/>
                             <constraint firstItem="aK4-ei-mDT" firstAttribute="trailing" secondItem="cID-tF-WFn" secondAttribute="trailing" constant="20" id="vYe-DC-jiV"/>
                             <constraint firstItem="YJe-Ht-LRy" firstAttribute="height" secondItem="bAq-6r-AuZ" secondAttribute="height" multiplier="0.27" id="yvd-EO-41y"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="addNewUpdateButton" destination="I8V-Ie-Thb" id="fjF-MZ-zEP"/>
                         <outlet property="containerView" destination="hw9-pJ-6Iu" id="Zjv-Eh-4Bg"/>
                         <outlet property="nameLabel" destination="mr3-PA-KcW" id="kFH-a6-Hp6"/>
                         <outlet property="pinnedNotesTextView" destination="cID-tF-WFn" id="EXk-Au-4hD"/>
@@ -120,6 +130,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecS-yp-TAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1513.0434782608697" y="116.51785714285714"/>
+        </scene>
+        <!--Add Update View Controller-->
+        <scene sceneID="tlv-Qy-XXB">
+            <objects>
+                <viewController storyboardIdentifier="AddUpdateViewController" id="cax-hF-aTY" customClass="AddUpdateViewController" customModule="Garden_Journal_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hq2-zB-HWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-qk-VzY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="uU8-fE-4GT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BEo-hP-69Y"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="71j-5E-8iZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="m6I-qk-VzY" id="gpH-KS-yMk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pA-Ue-8Jn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2324.6376811594205" y="-273.21428571428572"/>
         </scene>
         <!--Updates Page View Controller-->
         <scene sceneID="deO-8S-Z5T">
@@ -195,6 +231,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

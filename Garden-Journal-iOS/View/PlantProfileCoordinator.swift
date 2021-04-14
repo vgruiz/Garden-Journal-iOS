@@ -75,6 +75,12 @@ class PlantProfileCoordinator: Coordinator {
         return updatesPageViewController
     }
     
+    func addNewUpdate() {
+        let addUpdateCoordinator = AddUpdateCoordinator(navigationController: navigationController)
+        addUpdateCoordinator.parentCoordinator = self
+        childCoordinators.append(addUpdateCoordinator)
+        addUpdateCoordinator.start()
+    }
     
     
 }

@@ -18,6 +18,8 @@
 		292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292DE44B260305FB0070A777 /* NewPlantInputViewController.xib */; };
 		292DE450260308540070A777 /* NewPlantInputPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE44F260308540070A777 /* NewPlantInputPageViewController.swift */; };
 		292DE45326030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */; };
+		292F528C26269FFC003EB011 /* AddUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292F528B26269FFC003EB011 /* AddUpdateViewController.swift */; };
+		292F52902626A1A3003EB011 /* AddUpdateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292F528F2626A1A3003EB011 /* AddUpdateCoordinator.swift */; };
 		2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9925EB48230016F841 /* MainCoordinator.swift */; };
 		2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9D25EB48300016F841 /* Coordinator.swift */; };
 		2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BAA025EB48710016F841 /* Storyboarded.swift */; };
@@ -70,6 +72,8 @@
 		292DE44B260305FB0070A777 /* NewPlantInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPlantInputViewController.xib; sourceTree = "<group>"; };
 		292DE44F260308540070A777 /* NewPlantInputPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputPageViewController.swift; sourceTree = "<group>"; };
 		292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputPageViewCoordinator.swift; sourceTree = "<group>"; };
+		292F528B26269FFC003EB011 /* AddUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateViewController.swift; sourceTree = "<group>"; };
+		292F528F2626A1A3003EB011 /* AddUpdateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9925EB48230016F841 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9D25EB48300016F841 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2931BAA025EB48710016F841 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		292F528A26269FB4003EB011 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				292F528B26269FFC003EB011 /* AddUpdateViewController.swift */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
 		2931BA9825EB47FD0016F841 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +161,7 @@
 				2931BA9925EB48230016F841 /* MainCoordinator.swift */,
 				2931BAA725EB50C60016F841 /* PlantProfileCoordinator.swift */,
 				292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */,
+				292F528F2626A1A3003EB011 /* AddUpdateCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -233,6 +246,7 @@
 				2931BAC025EF4B370016F841 /* Home */,
 				2931BAC125EF4B5D0016F841 /* Plant Profile */,
 				2931BAC225EF4B740016F841 /* Add New Plant */,
+				292F528A26269FB4003EB011 /* Update */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				292DE41F25FEE12C0070A777 /* ImagePicker.swift in Sources */,
+				292F528C26269FFC003EB011 /* AddUpdateViewController.swift in Sources */,
 				2987B28E262009BB0030550E /* UpdatesPageSubView.swift in Sources */,
 				29906A0A2618248100C8D188 /* UpdatesCollectionViewController.swift in Sources */,
 				2931BAB225EC717D0016F841 /* PlantProfileViewModelForPlant.swift in Sources */,
@@ -360,6 +375,7 @@
 				29ED25622612E7D50066CD5A /* UIButton+Ext.swift in Sources */,
 				29906A052618246600C8D188 /* UpdatesTableViewController.swift in Sources */,
 				2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */,
+				292F52902626A1A3003EB011 /* AddUpdateCoordinator.swift in Sources */,
 				292DE40E25F723DE0070A777 /* NewPlantInputViewModel.swift in Sources */,
 				292DE41125F726F70070A777 /* NewPlantInputViewModelForInput.swift in Sources */,
 				2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */,
