@@ -20,6 +20,8 @@
 		292DE45326030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */; };
 		292F528C26269FFC003EB011 /* AddUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292F528B26269FFC003EB011 /* AddUpdateViewController.swift */; };
 		292F52902626A1A3003EB011 /* AddUpdateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292F528F2626A1A3003EB011 /* AddUpdateCoordinator.swift */; };
+		292F5296262942CB003EB011 /* UpdateImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292F5295262942CB003EB011 /* UpdateImageView.xib */; };
+		292F529926294318003EB011 /* UpdateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292F529826294318003EB011 /* UpdateImageView.swift */; };
 		2931BA9A25EB48230016F841 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9925EB48230016F841 /* MainCoordinator.swift */; };
 		2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BA9D25EB48300016F841 /* Coordinator.swift */; };
 		2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2931BAA025EB48710016F841 /* Storyboarded.swift */; };
@@ -74,6 +76,9 @@
 		292DE45226030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantInputPageViewCoordinator.swift; sourceTree = "<group>"; };
 		292F528B26269FFC003EB011 /* AddUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateViewController.swift; sourceTree = "<group>"; };
 		292F528F2626A1A3003EB011 /* AddUpdateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateCoordinator.swift; sourceTree = "<group>"; };
+		292F529326293098003EB011 /* TrefleApiTesting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = TrefleApiTesting.playground; path = "Garden-Journal-iOS/TrefleApiTesting.playground"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		292F5295262942CB003EB011 /* UpdateImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateImageView.xib; sourceTree = "<group>"; };
+		292F529826294318003EB011 /* UpdateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateImageView.swift; sourceTree = "<group>"; };
 		2931BA9925EB48230016F841 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2931BA9D25EB48300016F841 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2931BAA025EB48710016F841 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -149,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				292F528B26269FFC003EB011 /* AddUpdateViewController.swift */,
+				292F5295262942CB003EB011 /* UpdateImageView.xib */,
+				292F529826294318003EB011 /* UpdateImageView.swift */,
 			);
 			path = Update;
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 		2946C17F25E329DB00268123 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				292F529326293098003EB011 /* TrefleApiTesting.playground */,
 				2946C18225E32ACF00268123 /* Observable.swift */,
 				2946C19525E33B8600268123 /* PlantTableViewCellViewModel.swift */,
 				2946C19125E33A6D00268123 /* PlantTableViewCellViewModelFromPlant.swift */,
@@ -351,6 +359,7 @@
 				2946C17125E329C300268123 /* Assets.xcassets in Resources */,
 				292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */,
 				29A0618C26182CA8009593AD /* UpdateTableViewCell.xib in Resources */,
+				292F5296262942CB003EB011 /* UpdateImageView.xib in Resources */,
 				2946C16C25E329C100268123 /* Main.storyboard in Resources */,
 				295BFF1F261EBD76000B99DD /* UpdateCollectionViewCell.xib in Resources */,
 			);
@@ -404,6 +413,7 @@
 				2931BAAF25EC6AB00016F841 /* PlantProfileViewModel.swift in Sources */,
 				292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */,
 				292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */,
+				292F529926294318003EB011 /* UpdateImageView.swift in Sources */,
 				292DE45326030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift in Sources */,
 				2931BAA125EB48710016F841 /* Storyboarded.swift in Sources */,
 			);

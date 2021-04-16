@@ -30,6 +30,7 @@ final class MyColor {
     var sharedInstanceExists = false
     static let disabledGray = UIColor.lightGray
     static let lightTextGray = UIColor.systemGray
+    static let updateBackground = UIColor(netHex: 0xF3F8F7)
     
     var activeColorSceheme: ColorScheme {
         get {
