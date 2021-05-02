@@ -45,6 +45,14 @@
 		2946C1A025E3672200268123 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946C19F25E3672200268123 /* CoreDataManager.swift */; };
 		295BFF1E261EBD76000B99DD /* UpdateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295BFF1C261EBD76000B99DD /* UpdateCollectionViewCell.swift */; };
 		295BFF1F261EBD76000B99DD /* UpdateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295BFF1D261EBD76000B99DD /* UpdateCollectionViewCell.xib */; };
+		2971B2B1263E111A0015D118 /* UpdateDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2971B2B0263E111A0015D118 /* UpdateDateView.xib */; };
+		2971B2B4263E12990015D118 /* UpdateDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971B2B3263E12990015D118 /* UpdateDateView.swift */; };
+		2971B2B9263E1CC20015D118 /* UpdateNotesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2971B2B8263E1CC20015D118 /* UpdateNotesView.xib */; };
+		2971B2BC263E1F480015D118 /* UpdateNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971B2BB263E1F470015D118 /* UpdateNotesView.swift */; };
+		2971B2C0263E29FD0015D118 /* UpdateWorkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2971B2BF263E29FD0015D118 /* UpdateWorkView.xib */; };
+		2971B2C3263E2A290015D118 /* UpdateWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971B2C2263E2A290015D118 /* UpdateWorkView.swift */; };
+		2971B2C6263E2D760015D118 /* UpdateStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2971B2C5263E2D760015D118 /* UpdateStatusView.xib */; };
+		2971B2C9263E2DC30015D118 /* UpdateStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971B2C8263E2DC30015D118 /* UpdateStatusView.swift */; };
 		2987B28E262009BB0030550E /* UpdatesPageSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2987B28D262009BB0030550E /* UpdatesPageSubView.swift */; };
 		29906A052618246600C8D188 /* UpdatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A032618246600C8D188 /* UpdatesTableViewController.swift */; };
 		29906A0A2618248100C8D188 /* UpdatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */; };
@@ -104,6 +112,14 @@
 		2946C19F25E3672200268123 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		295BFF1C261EBD76000B99DD /* UpdateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCollectionViewCell.swift; sourceTree = "<group>"; };
 		295BFF1D261EBD76000B99DD /* UpdateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCollectionViewCell.xib; sourceTree = "<group>"; };
+		2971B2B0263E111A0015D118 /* UpdateDateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateDateView.xib; sourceTree = "<group>"; };
+		2971B2B3263E12990015D118 /* UpdateDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDateView.swift; sourceTree = "<group>"; };
+		2971B2B8263E1CC20015D118 /* UpdateNotesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateNotesView.xib; sourceTree = "<group>"; };
+		2971B2BB263E1F470015D118 /* UpdateNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotesView.swift; sourceTree = "<group>"; };
+		2971B2BF263E29FD0015D118 /* UpdateWorkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateWorkView.xib; sourceTree = "<group>"; };
+		2971B2C2263E2A290015D118 /* UpdateWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateWorkView.swift; sourceTree = "<group>"; };
+		2971B2C5263E2D760015D118 /* UpdateStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateStatusView.xib; sourceTree = "<group>"; };
+		2971B2C8263E2DC30015D118 /* UpdateStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStatusView.swift; sourceTree = "<group>"; };
 		2987B28D262009BB0030550E /* UpdatesPageSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesPageSubView.swift; sourceTree = "<group>"; };
 		29906A032618246600C8D188 /* UpdatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewController.swift; sourceTree = "<group>"; };
 		29906A082618248100C8D188 /* UpdatesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +172,14 @@
 				292F528B26269FFC003EB011 /* AddUpdateViewController.swift */,
 				292F5295262942CB003EB011 /* UpdateImageView.xib */,
 				292F529826294318003EB011 /* UpdateImageView.swift */,
+				2971B2B0263E111A0015D118 /* UpdateDateView.xib */,
+				2971B2B3263E12990015D118 /* UpdateDateView.swift */,
+				2971B2B8263E1CC20015D118 /* UpdateNotesView.xib */,
+				2971B2BB263E1F470015D118 /* UpdateNotesView.swift */,
+				2971B2BF263E29FD0015D118 /* UpdateWorkView.xib */,
+				2971B2C2263E2A290015D118 /* UpdateWorkView.swift */,
+				2971B2C5263E2D760015D118 /* UpdateStatusView.xib */,
+				2971B2C8263E2DC30015D118 /* UpdateStatusView.swift */,
 			);
 			path = Update;
 			sourceTree = "<group>";
@@ -354,14 +378,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2971B2C0263E29FD0015D118 /* UpdateWorkView.xib in Resources */,
 				2946C17425E329C300268123 /* LaunchScreen.storyboard in Resources */,
 				2946C18F25E3376900268123 /* PlantTableViewCell.xib in Resources */,
+				2971B2C6263E2D760015D118 /* UpdateStatusView.xib in Resources */,
 				2946C17125E329C300268123 /* Assets.xcassets in Resources */,
 				292DE44D260305FB0070A777 /* NewPlantInputViewController.xib in Resources */,
 				29A0618C26182CA8009593AD /* UpdateTableViewCell.xib in Resources */,
 				292F5296262942CB003EB011 /* UpdateImageView.xib in Resources */,
 				2946C16C25E329C100268123 /* Main.storyboard in Resources */,
+				2971B2B9263E1CC20015D118 /* UpdateNotesView.xib in Resources */,
 				295BFF1F261EBD76000B99DD /* UpdateCollectionViewCell.xib in Resources */,
+				2971B2B1263E111A0015D118 /* UpdateDateView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,11 +415,14 @@
 				292F52902626A1A3003EB011 /* AddUpdateCoordinator.swift in Sources */,
 				292DE40E25F723DE0070A777 /* NewPlantInputViewModel.swift in Sources */,
 				292DE41125F726F70070A777 /* NewPlantInputViewModelForInput.swift in Sources */,
+				2971B2BC263E1F480015D118 /* UpdateNotesView.swift in Sources */,
 				2931BA9E25EB48300016F841 /* Coordinator.swift in Sources */,
 				2946C19225E33A6D00268123 /* PlantTableViewCellViewModelFromPlant.swift in Sources */,
 				29A0618F26182EA0009593AD /* UpdatesTableViewViewModel.swift in Sources */,
+				2971B2C9263E2DC30015D118 /* UpdateStatusView.swift in Sources */,
 				2931BAAC25EB512A0016F841 /* PlantProfileViewController.swift in Sources */,
 				29A0619226183053009593AD /* UpdateTableViewCellViewModel.swift in Sources */,
+				2971B2C3263E2A290015D118 /* UpdateWorkView.swift in Sources */,
 				29ED255F2612E0090066CD5A /* UIColor+ext.swift in Sources */,
 				29A0619826193FD7009593AD /* UpdatesPageViewController.swift in Sources */,
 				2946C18325E32ACF00268123 /* Observable.swift in Sources */,
@@ -412,6 +443,7 @@
 				29A06195261830A8009593AD /* UpdateTableViewCellViewModelForUpdate.swift in Sources */,
 				2931BAAF25EC6AB00016F841 /* PlantProfileViewModel.swift in Sources */,
 				292A737025E60CCD009268B8 /* InMemoryObjects.swift in Sources */,
+				2971B2B4263E12990015D118 /* UpdateDateView.swift in Sources */,
 				292DE42225FEEEDC0070A777 /* UIVIew+Ext.swift in Sources */,
 				292F529926294318003EB011 /* UpdateImageView.swift in Sources */,
 				292DE45326030D3F0070A777 /* NewPlantInputPageViewCoordinator.swift in Sources */,
